@@ -1,0 +1,169 @@
+id: https://w3id.org/FOVT/linkml/traitvalue
+name: traitvalue
+prefixes:
+  linkml: https://w3id.org/linkml/
+  traitvalue: http://purl.obolibrary.org/obo/FOVT/data#
+  FOVT:  http://purl.obolibrary.org/obo/FOVT_
+  OBA:   http://purl.obolibrary.org/obo/OBA_
+  dc: http://purl.org/dc/elements/1.1/
+
+imports:
+  - linkml:types
+default_range: string
+default_prefix: traitvalue
+
+classes:
+  TraitValue:
+    slots:
+      - occurrenceID
+      - institutionCode
+      - catalogNumber
+      - scientificName
+      - order
+      - family
+      - genus
+      - specificEpithet
+      - day
+      - month
+      - year
+      - countryCode
+      - stateProvince
+      - decimalLatitude
+      - decimalLongitude
+      - dynamicProperties
+      - occurrenceRemarks
+      - fieldNotes
+      - body_mass
+      - body_mass_ambiguous
+      - body_mass_units_inferred
+      - ear_from_notch
+      - ear_length
+      - ear_length_units_inferred
+      - embryo_count
+      - embryo_length
+      - embryo_size_units_inferred
+      - forearm_length
+      - hind_foot_length
+      - hind_foot_length_units_inferred
+      - hind_foot_with_claw
+      - lactation
+      - life_stage
+      - nipple
+      - nipple_count
+      - pregnancy
+      - sex
+      - tail_length
+      - tail_length_estimated
+      - tail_length_units_inferred
+      - testicle_description
+      - testicle_length
+      - testicle_size_units_inferred
+      - testicle_width
+      - total_length
+      - total_length_ambiguous
+      - total_length_estimated
+      - total_length_units_inferred
+      - tragus_length
+      - vagina
+
+slots:
+  occurrenceID:
+    range: string
+  institutionCode:
+    range: string
+  catalogNumber:
+    range: string
+  scientificName:
+    range: string
+  order:
+    range: string
+  family:
+    range: string
+  genus:
+    range: string
+  specificEpithet:
+    range: string
+  day:
+    range: integer
+  month:
+    range: integer
+  year:
+    range: integer
+  countryCode:
+    range: string
+  stateProvince:
+    range: string
+  decimalLatitude:
+    range: float
+  decimalLongitude:
+    range: float
+  dynamicProperties:
+    range: string
+  occurrenceRemarks:
+    range: string
+  fieldNotes:
+    range: string
+  body_mass:
+    range: float
+  body_mass_ambiguous:
+    range: boolean
+  body_mass_units_inferred:
+    range: boolean
+  ear_from_notch:
+    range: float
+  ear_length:
+    range: float
+  ear_length_units_inferred:
+    range: boolean
+  embryo_count:
+    range: integer
+  embryo_length:
+    range: float
+  embryo_size_units_inferred:
+    range: boolean
+  forearm_length:
+    range: float
+  hind_foot_length:
+    range: float
+  hind_foot_length_units_inferred:
+    range: boolean
+  hind_foot_with_claw:
+    range: float
+  lactation:
+    range: string
+  life_stage:
+    range: string
+  nipple:
+    range: string
+  nipple_count:
+    range: integer
+  pregnancy:
+    range: string
+  sex:
+    range: string
+  tail_length:
+    range: float
+  tail_length_estimated:
+    range: boolean
+  tail_length_units_inferred:
+    range: boolean
+  testicle_description:
+    range: string
+  testicle_length:
+    range: float
+  testicle_size_units_inferred:
+    range: boolean
+  testicle_width:
+    range: float
+  total_length:
+    range: float
+  total_length_ambiguous:
+    range: boolean
+  total_length_estimated:
+    range: boolean
+  total_length_units_inferred:
+    range: boolean
+  tragus_length:
+    range: float
+  vagina:
+    range: string

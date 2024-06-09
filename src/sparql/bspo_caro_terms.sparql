@@ -1,0 +1,24 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+SELECT DISTINCT ?curie ?term
+WHERE {
+  {
+    # fetch classes
+    ?iri ?p ?o . 
+    ?iri rdfs:label ?label .
+    FILTER(isIRI(?iri) && ((CONTAINS(str(?iri), "BSPO_") || (CONTAINS(str(?iri), "CARO_"))))) 
+  } UNION {
+    # fetch properties
+    ?iri a owl:ObjectProperty .
+    ?s ?iri ?o . 
+    ?iri rdfs:label ?label .
+    FILTER(isIRI(?iri) && ((CONTAINS(str(?iri), "BSPO_") || (CONTAINS(str(?iri), "CARO_"))))) 
+  }
+  
+  BIND(REPLACE(str(?iri), "<http://purl.obolibrary.org/obo/", "") as ?temp)
+  BIND(SUBSTR(?temp, 32, 12) as ?id)
+  BIND(REPLACE(?id, "_", ":") as ?curie)
+  BIND(CONCAT("# ", ?label) as ?term)
+} 
+ORDER BY ?curie

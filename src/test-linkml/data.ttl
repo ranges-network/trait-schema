@@ -1,0 +1,41 @@
+@prefix traitvalue: <http://purl.obolibrary.org/obo/FOVT/data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a traitvalue:Container ;
+    traitvalue:trait_values [ a traitvalue:TraitValue ;
+            traitvalue:body_mass "56.6"^^xsd:float ;
+            traitvalue:catalogNumber "ASUMAC009037" ;
+            traitvalue:countryCode "US" ;
+            traitvalue:day 15 ;
+            traitvalue:decimalLatitude "33.302798"^^xsd:float ;
+            traitvalue:decimalLongitude "-111.410672"^^xsd:float ;
+            traitvalue:institutionCode "ASU" ;
+            traitvalue:month 5 ;
+            traitvalue:occurrenceID "2f44e05e-4eec-4ae9-8fc4-3477dcc2182f" ;
+            traitvalue:occurrenceRemarks "Weighed after frozen" ;
+            traitvalue:scientificName "Xerospermophilus tereticaudus (Baird 1858)" ;
+            traitvalue:sex "" ;
+            traitvalue:specificEpithet "tereticaudus" ;
+            traitvalue:stateProvince "Arizona" ;
+            traitvalue:tail_length "65.0"^^xsd:float ;
+            traitvalue:total_length "194.0"^^xsd:float ;
+            traitvalue:year 2023 ],
+        [ a traitvalue:TraitValue ;
+            traitvalue:body_mass "56.6"^^xsd:float ;
+            traitvalue:catalogNumber "ASUMAC009037" ;
+            traitvalue:countryCode "US" ;
+            traitvalue:day 15 ;
+            traitvalue:decimalLatitude "33.302798"^^xsd:float ;
+            traitvalue:decimalLongitude "-111.410672"^^xsd:float ;
+            traitvalue:institutionCode "ASU" ;
+            traitvalue:month 5 ;
+            traitvalue:occurrenceID "2f44e05e-4eec-4ae9-8fc4-3477dcc2182f" ;
+            traitvalue:occurrenceRemarks "Weighed after frozen" ;
+            traitvalue:scientificName "Xerospermophilus tereticaudus (Baird 1858)" ;
+            traitvalue:sex "" ;
+            traitvalue:specificEpithet "tereticaudus" ;
+            traitvalue:stateProvince "Arizona" ;
+            traitvalue:tail_length "65.0"^^xsd:float ;
+            traitvalue:total_length "194.0"^^xsd:float ;
+            traitvalue:year 2023 ] .
+

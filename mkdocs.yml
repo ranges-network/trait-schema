@@ -1,0 +1,20 @@
+site_name: FOVT Trait Value Schema (Test)
+site_url: http://ranges-network.org/test-fovt-restructure/
+repo_url: https://github.com/ranges-network/test-fovt-restructure/
+
+plugins:
+  - search
+  - mermaid2:
+      version: 10.9.0
+  - redirects: # reference: https://github.com/mkdocs/mkdocs-redirects
+      redirect_maps:
+        'home.md': 'index.md'  # redirects "/home" to "/"
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.magiclink
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+nav:
+  - Trait Value Schema: index.md

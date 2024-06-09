@@ -1,0 +1,169 @@
+{
+    "$defs": {
+        "TraitValue": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "body_mass": {
+                    "type": "number"
+                },
+                "body_mass_ambiguous": {
+                    "type": "boolean"
+                },
+                "body_mass_units_inferred": {
+                    "type": "boolean"
+                },
+                "catalogNumber": {
+                    "type": "string"
+                },
+                "countryCode": {
+                    "type": "string"
+                },
+                "day": {
+                    "type": "integer"
+                },
+                "decimalLatitude": {
+                    "type": "number"
+                },
+                "decimalLongitude": {
+                    "type": "number"
+                },
+                "dynamicProperties": {
+                    "type": "string"
+                },
+                "ear_from_notch": {
+                    "type": "number"
+                },
+                "ear_length": {
+                    "type": "number"
+                },
+                "ear_length_units_inferred": {
+                    "type": "boolean"
+                },
+                "embryo_count": {
+                    "type": "integer"
+                },
+                "embryo_length": {
+                    "type": "number"
+                },
+                "embryo_size_units_inferred": {
+                    "type": "boolean"
+                },
+                "family": {
+                    "type": "string"
+                },
+                "fieldNotes": {
+                    "type": "string"
+                },
+                "forearm_length": {
+                    "type": "number"
+                },
+                "genus": {
+                    "type": "string"
+                },
+                "hind_foot_length": {
+                    "type": "number"
+                },
+                "hind_foot_length_units_inferred": {
+                    "type": "boolean"
+                },
+                "hind_foot_with_claw": {
+                    "type": "number"
+                },
+                "institutionCode": {
+                    "type": "string"
+                },
+                "lactation": {
+                    "type": "string"
+                },
+                "life_stage": {
+                    "type": "string"
+                },
+                "month": {
+                    "type": "integer"
+                },
+                "nipple": {
+                    "type": "string"
+                },
+                "nipple_count": {
+                    "type": "integer"
+                },
+                "occurrenceID": {
+                    "type": "string"
+                },
+                "occurrenceRemarks": {
+                    "type": "string"
+                },
+                "order": {
+                    "type": "string"
+                },
+                "pregnancy": {
+                    "type": "string"
+                },
+                "scientificName": {
+                    "type": "string"
+                },
+                "sex": {
+                    "type": "string"
+                },
+                "specificEpithet": {
+                    "type": "string"
+                },
+                "stateProvince": {
+                    "type": "string"
+                },
+                "tail_length": {
+                    "type": "number"
+                },
+                "tail_length_estimated": {
+                    "type": "boolean"
+                },
+                "tail_length_units_inferred": {
+                    "type": "boolean"
+                },
+                "testicle_description": {
+                    "type": "string"
+                },
+                "testicle_length": {
+                    "type": "number"
+                },
+                "testicle_size_units_inferred": {
+                    "type": "boolean"
+                },
+                "testicle_width": {
+                    "type": "number"
+                },
+                "total_length": {
+                    "type": "number"
+                },
+                "total_length_ambiguous": {
+                    "type": "boolean"
+                },
+                "total_length_estimated": {
+                    "type": "boolean"
+                },
+                "total_length_units_inferred": {
+                    "type": "boolean"
+                },
+                "tragus_length": {
+                    "type": "number"
+                },
+                "vagina": {
+                    "type": "string"
+                },
+                "year": {
+                    "type": "integer"
+                }
+            },
+            "title": "TraitValue",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/FOVT/linkml/traitvalue",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "traitvalue",
+    "type": "object",
+    "version": null
+}

@@ -1,0 +1,4 @@
+occurrenceID,institutionCode,catalogNumber,scientificName,specificEpithet,day,month,year,countryCode,stateProvince,decimalLatitude,decimalLongitude,occurrenceRemarks,body_mass,sex,tail_length,total_length
+2f44e05e-4eec-4ae9-8fc4-3477dcc2182f,ASU,ASUMAC009037,"Xerospermophilus tereticaudus (Baird, 1858)",tereticaudus,15,5,2023,US,Arizona,33.302798,-111.410672,Weighed after frozen,56.6,,65,194
+cf36733e-a21c-4d31-8eda-0419af164c77,ASU,ASUMAC009027,"Otospermophilus variegatus (Erxleben, 1777)",variegatus,3,10,2023,US,Arizona,34.001111,-110.958611,"Collected between 8:20 and 9:20 am; 48 deg F, no wind",567,,195,328
+c2fb98f2-c2bd-4c14-95f6-53c951937ede,ASU,ASUMAC009029,"Sciurus arizonensis Coues, 1867",arizonensis,20,12,2021,US,Arizona,31.31995,-111.82971,Head only,,,,

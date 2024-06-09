@@ -1,0 +1,1019 @@
+{
+  "name": "traitvalue",
+  "id": "https://w3id.org/FOVT/linkml/traitvalue",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "prefixes": [
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "traitvalue",
+      "prefix_reference": "http://purl.obolibrary.org/obo/FOVT/data#"
+    },
+    {
+      "prefix_prefix": "FOVT",
+      "prefix_reference": "http://purl.obolibrary.org/obo/FOVT_"
+    },
+    {
+      "prefix_prefix": "OBA",
+      "prefix_reference": "http://purl.obolibrary.org/obo/OBA_"
+    },
+    {
+      "prefix_prefix": "dc",
+      "prefix_reference": "http://purl.org/dc/elements/1.1/"
+    }
+  ],
+  "default_prefix": "traitvalue",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
+      "comments": [
+        "Used for inheritance and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "slots": [
+    {
+      "name": "occurrenceID",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#occurrenceID",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#occurrenceID",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "institutionCode",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#institutionCode",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#institutionCode",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "catalogNumber",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#catalogNumber",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#catalogNumber",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "scientificName",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#scientificName",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#scientificName",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "order",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#order",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#order",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "family",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#family",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#family",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "genus",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#genus",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#genus",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "specificEpithet",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#specificEpithet",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#specificEpithet",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "day",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#day",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#day",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "month",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#month",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#month",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "year",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#year",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#year",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "countryCode",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#countryCode",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#countryCode",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "stateProvince",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#stateProvince",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#stateProvince",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "decimalLatitude",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLatitude",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLatitude",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "decimalLongitude",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLongitude",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLongitude",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dynamicProperties",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#dynamicProperties",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#dynamicProperties",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "occurrenceRemarks",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#occurrenceRemarks",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#occurrenceRemarks",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "fieldNotes",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#fieldNotes",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#fieldNotes",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "body_mass",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "body_mass_ambiguous",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_ambiguous",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_ambiguous",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "body_mass_units_inferred",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_units_inferred",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_units_inferred",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ear_from_notch",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_from_notch",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_from_notch",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ear_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "ear_length_units_inferred",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length_units_inferred",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length_units_inferred",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "embryo_count",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_count",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_count",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "embryo_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "embryo_size_units_inferred",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_size_units_inferred",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_size_units_inferred",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "forearm_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#forearm_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#forearm_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hind_foot_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hind_foot_length_units_inferred",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length_units_inferred",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length_units_inferred",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "hind_foot_with_claw",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_with_claw",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_with_claw",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "lactation",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#lactation",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#lactation",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "life_stage",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#life_stage",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#life_stage",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "nipple",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "nipple_count",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple_count",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple_count",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "pregnancy",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#pregnancy",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#pregnancy",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "sex",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#sex",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#sex",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "tail_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "tail_length_estimated",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_estimated",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_estimated",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "tail_length_units_inferred",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_units_inferred",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_units_inferred",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "testicle_description",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_description",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_description",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "testicle_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "testicle_size_units_inferred",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_size_units_inferred",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_size_units_inferred",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "testicle_width",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_width",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_width",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "total_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "total_length_ambiguous",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_ambiguous",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_ambiguous",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "total_length_estimated",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_estimated",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_estimated",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "total_length_units_inferred",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_units_inferred",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_units_inferred",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "tragus_length",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tragus_length",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tragus_length",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "vagina",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#vagina",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#vagina",
+      "owner": "TraitValue",
+      "domain_of": [
+        "TraitValue"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "TraitValue",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#TraitValue",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "slots": [
+        "occurrenceID",
+        "institutionCode",
+        "catalogNumber",
+        "scientificName",
+        "order",
+        "family",
+        "genus",
+        "specificEpithet",
+        "day",
+        "month",
+        "year",
+        "countryCode",
+        "stateProvince",
+        "decimalLatitude",
+        "decimalLongitude",
+        "dynamicProperties",
+        "occurrenceRemarks",
+        "fieldNotes",
+        "body_mass",
+        "body_mass_ambiguous",
+        "body_mass_units_inferred",
+        "ear_from_notch",
+        "ear_length",
+        "ear_length_units_inferred",
+        "embryo_count",
+        "embryo_length",
+        "embryo_size_units_inferred",
+        "forearm_length",
+        "hind_foot_length",
+        "hind_foot_length_units_inferred",
+        "hind_foot_with_claw",
+        "lactation",
+        "life_stage",
+        "nipple",
+        "nipple_count",
+        "pregnancy",
+        "sex",
+        "tail_length",
+        "tail_length_estimated",
+        "tail_length_units_inferred",
+        "testicle_description",
+        "testicle_length",
+        "testicle_size_units_inferred",
+        "testicle_width",
+        "total_length",
+        "total_length_ambiguous",
+        "total_length_estimated",
+        "total_length_units_inferred",
+        "tragus_length",
+        "vagina"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.obolibrary.org/obo/FOVT/data#TraitValue",
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "trait-value.yml",
+  "source_file_date": "2024-06-08T00:42:48",
+  "source_file_size": 3390,
+  "generation_date": "2024-06-09T02:20:24",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "http://purl.obolibrary.org/obo/FOVT/data#"
+    }
+  ]
+}
+

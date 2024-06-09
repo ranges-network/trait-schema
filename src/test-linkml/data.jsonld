@@ -1,0 +1,126 @@
+{
+  "trait_values": [
+    {
+      "occurrenceID": "2f44e05e-4eec-4ae9-8fc4-3477dcc2182f",
+      "institutionCode": "ASU",
+      "catalogNumber": "ASUMAC009037",
+      "scientificName": "Xerospermophilus tereticaudus (Baird 1858)",
+      "specificEpithet": "tereticaudus",
+      "day": 15,
+      "month": 5,
+      "year": 2023,
+      "countryCode": "US",
+      "stateProvince": "Arizona",
+      "decimalLatitude": 33.302798,
+      "decimalLongitude": -111.410672,
+      "occurrenceRemarks": "Weighed after frozen",
+      "body_mass": 56.6,
+      "sex": "",
+      "tail_length": 65.0,
+      "total_length": 194.0
+    },
+    {
+      "occurrenceID": "2f44e05e-4eec-4ae9-8fc4-3477dcc2182f",
+      "institutionCode": "ASU",
+      "catalogNumber": "ASUMAC009037",
+      "scientificName": "Xerospermophilus tereticaudus (Baird 1858)",
+      "specificEpithet": "tereticaudus",
+      "day": 15,
+      "month": 5,
+      "year": 2023,
+      "countryCode": "US",
+      "stateProvince": "Arizona",
+      "decimalLatitude": 33.302798,
+      "decimalLongitude": -111.410672,
+      "occurrenceRemarks": "Weighed after frozen",
+      "body_mass": 56.6,
+      "sex": "",
+      "tail_length": 65.0,
+      "total_length": 194.0
+    }
+  ],
+  "@type": "Container",
+  "@context": {
+    "FOVT": {
+      "@id": "http://purl.obolibrary.org/obo/FOVT_",
+      "@prefix": true
+    },
+    "OBA": {
+      "@id": "http://purl.obolibrary.org/obo/OBA_",
+      "@prefix": true
+    },
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "linkml": "https://w3id.org/linkml/",
+    "traitvalue": "http://purl.obolibrary.org/obo/FOVT/data#",
+    "@vocab": "http://purl.obolibrary.org/obo/FOVT/data#",
+    "body_mass": {
+      "@type": "xsd:float",
+      "@id": "body_mass"
+    },
+    "catalogNumber": {
+      "@id": "catalogNumber"
+    },
+    "trait_values": {
+      "@type": "@id",
+      "@id": "trait_values"
+    },
+    "countryCode": {
+      "@id": "countryCode"
+    },
+    "day": {
+      "@type": "xsd:integer",
+      "@id": "day"
+    },
+    "decimalLatitude": {
+      "@type": "xsd:float",
+      "@id": "decimalLatitude"
+    },
+    "decimalLongitude": {
+      "@type": "xsd:float",
+      "@id": "decimalLongitude"
+    },
+    "institutionCode": {
+      "@id": "institutionCode"
+    },
+    "month": {
+      "@type": "xsd:integer",
+      "@id": "month"
+    },
+    "occurrenceID": {
+      "@id": "occurrenceID"
+    },
+    "occurrenceRemarks": {
+      "@id": "occurrenceRemarks"
+    },
+    "scientificName": {
+      "@id": "scientificName"
+    },
+    "sex": {
+      "@id": "sex"
+    },
+    "specificEpithet": {
+      "@id": "specificEpithet"
+    },
+    "stateProvince": {
+      "@id": "stateProvince"
+    },
+    "tail_length": {
+      "@type": "xsd:float",
+      "@id": "tail_length"
+    },
+    "total_length": {
+      "@type": "xsd:float",
+      "@id": "total_length"
+    },
+    "year": {
+      "@type": "xsd:integer",
+      "@id": "year"
+    },
+    "Container": {
+      "@id": "Container"
+    },
+    "TraitValue": {
+      "@id": "TraitValue"
+    }
+  }
+}

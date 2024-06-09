@@ -1,0 +1,1 @@
+directory for sparql queries

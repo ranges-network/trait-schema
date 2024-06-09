@@ -1,0 +1,72 @@
+id: https://w3id.org/FOVT/linkml/traitvalue
+name: traitvalue
+prefixes:
+  linkml: https://w3id.org/linkml/
+  traitvalue: http://purl.obolibrary.org/obo/FOVT/data#
+  FOVT:  http://purl.obolibrary.org/obo/FOVT_
+  OBA:   http://purl.obolibrary.org/obo/OBA_
+  dc: http://purl.org/dc/elements/1.1/
+
+imports:
+  - linkml:types
+default_range: string
+default_prefix: traitvalue
+
+classes:
+  TraitValue:
+    slots:
+      - occurrenceID
+      - institutionCode
+      - catalogNumber
+      - scientificName
+      - specificEpithet
+      - day
+      - month
+      - year
+      - countryCode
+      - stateProvince
+      - decimalLatitude
+      - decimalLongitude
+      - occurrenceRemarks
+      - body_mass
+      - sex
+      - tail_length
+      - total_length
+  
+  Container:
+    tree_root: true
+    attributes:
+      trait_values:
+        multivalued: true
+        inlined_as_list: true
+        range: TraitValue
+
+slots:
+  occurrenceID:
+  institutionCode:
+  catalogNumber:
+    range: string
+  scientificName:
+  specificEpithet:
+  day:
+    range: integer
+  month:
+    range: integer
+  year:
+    range: integer
+  countryCode:
+  stateProvince:
+  decimalLatitude:
+    range: float
+  decimalLongitude:
+    range: float
+  occurrenceRemarks:
+  body_mass:
+    range: float
+    related_mappings:
+      - OBA:VT0001259
+  sex:
+  tail_length:
+    range: float
+  total_length:
+    range: float
