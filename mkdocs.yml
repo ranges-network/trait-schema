@@ -1,6 +1,6 @@
-site_name: FOVT Trait Value Schema (Test)
-site_url: http://ranges-network.org/test-fovt-restructure/
-repo_url: https://github.com/ranges-network/test-fovt-restructure/
+site_name: Trait Schema
+site_url: https://ranges-network.org/trait-schema/
+repo_url: https://github.com/ranges-network/trait-schema/
 
 plugins:
   - search
