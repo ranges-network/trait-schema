@@ -17,4 +17,4 @@ extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
 nav:
-  - Trait Value Schema: index.md
+  - Trait Schema: index.md
