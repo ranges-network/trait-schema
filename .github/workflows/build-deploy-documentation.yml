@@ -48,7 +48,7 @@ jobs:
       - name: Build and deploy documentation.
         run: |
           mkdir -p docs
-          mdir -p docs/images
+          mkdir -p docs/images
           touch docs/.nojekyll
           make gendoc
           mkdocs gh-deploy --force
