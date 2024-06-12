@@ -35,7 +35,7 @@ jsonschema:
 	gen-json-schema $(SOURCE_SCHEMA_DIR)/trait-value.yml > jsonschema/trait-value.schema.json
 
 owl:
-	gen-owl $(SOURCE_SCHEMA_DIR)/trait-value.yml > owl/trait-value.owl 
+	gen-owl $(SOURCE_SCHEMA_DIR)/trait-value.yml > owl/trait-value.ttl 
 
 shacl:
 	gen-shacl $(SOURCE_SCHEMA_DIR)/trait-value.yml > shacl/trait-value.shacl 
