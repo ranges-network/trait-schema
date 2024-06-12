@@ -5,6 +5,8 @@ prefixes:
   traitvalue: http://purl.obolibrary.org/obo/FOVT/data#
   FOVT:  http://purl.obolibrary.org/obo/FOVT_
   OBA:   http://purl.obolibrary.org/obo/OBA_
+  UBERON:   http://purl.obolibrary.org/obo/UBERON_
+  PATO:   http://purl.obolibrary.org/obo/PATO_
   dcterms: http://purl.org/dc/terms/
 
 imports:
