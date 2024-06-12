@@ -5,7 +5,7 @@ prefixes:
   traitvalue: http://purl.obolibrary.org/obo/FOVT/data#
   FOVT:  http://purl.obolibrary.org/obo/FOVT_
   OBA:   http://purl.obolibrary.org/obo/OBA_
-  dc: http://purl.org/dc/elements/1.1/
+  dcterms: http://purl.org/dc/terms/
 
 imports:
   - linkml:types
@@ -68,6 +68,8 @@ classes:
 
 slots:
   occurrenceID:
+    description: >-
+      Identifies the record that contains the trait data values.
     range: string
   institutionCode:
     range: string
@@ -84,18 +86,32 @@ slots:
   specificEpithet:
     range: string
   day:
+    description: >-
+      The day of the month that the trait was recorded.
     range: integer
   month:
+    description: >-
+      The month that the trait was recorded.
     range: integer
   year:
+    description: >-
+      The year that the trait was recorded.
     range: integer
   countryCode:
+    description: >-
+      The country where the specimen with the trait was found.
     range: string
   stateProvince:
+    description: >-
+      The state where the specimen with the trait was found.
     range: string
   decimalLatitude:
+    description: >-
+      The latitude where the specimen with the trait was found.
     range: float
   decimalLongitude:
+    description: >-
+      The longitude where the specimen with the trait was found.
     range: float
   dynamicProperties:
     range: string
@@ -104,66 +120,172 @@ slots:
   fieldNotes:
     range: string
   body_mass:
+    description: >-
+      The mass of specimen having the trait.
     range: float
+    related_mappings: 
+      - "OBA:VT0001259"
   body_mass_ambiguous:
+    description: >-
+      Specifies if the recorded body mass is ambiguous.
     range: boolean
   body_mass_units_inferred:
+    description: >-
+      Specifies if the body mass units were inferred. 
     range: boolean
   ear_from_notch:
+    description: >-
+      Length of the ear from the notch to the tip.
     range: float
   ear_length:
+    description: >-
+      The length of an external ear.
     range: float
+    related_mappings:
+      - OBA:0003426
   ear_length_units_inferred:
+    description: >-
+      Specifies if the ear length units were inferred. 
     range: boolean
   embryo_count:
+    description: >-
+      The number of embryos observed in uterus.
     range: integer
+    related_mappings:
+      - UBERON:0000995
+      - UBERON:0009098
   embryo_length:
+    description: >-
+      The length of an embryo.
     range: float
+    related_mappings:
   embryo_size_units_inferred:
+    description: >-
+      Specifies if the embryo size units were inferred. 
     range: boolean
   forearm_length:
+    description: >-
+      The length of a forearm.
     range: float
+    related_mappings:
+      - FOVT:0001379
   hind_foot_length:
+    description: >-
+      The lengh of a hindfoot.
     range: float
+    related_mappings:
+      - OBA:1000049
   hind_foot_length_units_inferred:
+    description: >-
+      Specifies if the hind foot length units were inferred. 
     range: boolean
   hind_foot_with_claw:
+    description: >-
+      A length measurement of a hindfoot that includes the nail.
     range: float
+    related_mappings:
+      - FOVT:0000003
   lactation:
+    description: >-
+      Secretion or expression of milk from the mammary glands.
     range: string
+    related_mappings:
+      - UBERON:0001911
   life_stage:
+    description: >-
+      The developmental stage of the life cycle of the organism represented.
     range: string
+    related_mappings:
+      - UBERON:0000105
   nipple:
+    description: >-
+      The morphology of the specimen's nipple(s).
     range: string
+    related_mappings:
+      - OBA:VT0006078
   nipple_count:
+    description: >-
+      The number of nipples the specimen has.
     range: integer
+    related_mappings:
+      - OBA:VT1000206
   pregnancy:
+    description: >-
+      The specimen's uterus contains a developing embryo, fetus, or unborn offspring.
     range: string
+    related_mappings:
+      - UBERON:0000995
   sex:
+    description: >-
+      The biological sex of the specimen.
     range: string
+    related_mappings:
+      - PATO:0000047
   tail_length:
+    description: >-
+      The length of the specimen's tail.
     range: float
+    related_mappings:
+      - OBA:VT0002758
   tail_length_estimated:
+    description: >-
+      Specifies if the tail length was estimated.
     range: boolean
   tail_length_units_inferred:
+    description: >-
+      Specifies if the tail length units were inferred. 
     range: boolean
   testicle_description:
+    description: >-
+      The morphology of a testis.
     range: string
+    related_mappings:
+      - OBA:VT0001146
   testicle_length:
+    description: >-
+      The length of the long axis of testis spheroid.
     range: float
+    related_mappings:
+      - FOVT:0001057
   testicle_size_units_inferred:
+    description: >-
+      Specifies if the testis size units were inferred. 
     range: boolean
   testicle_width:
+    description: >-
+      The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).
     range: float
+    related_mappings:
+      - FOVT:0001368
   total_length:
+    description: >-
+      Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.
     range: float
+    related_mappings: 
+      - OBA:VT0001256
   total_length_ambiguous:
+    description: >-
+      Specifies if the total length recorded is ambiguous.
     range: boolean
   total_length_estimated:
+    description: >-
+      Specifies if the total length was estimated.
     range: boolean
   total_length_units_inferred:
+    description: >-
+      Specifies if the total length units were inferred. 
     range: boolean
   tragus_length:
+    description: >-
+      The length of the specimen's tragus.
     range: float
   vagina:
+    description: >-
+      The degree of perforation of the female vagina.
     range: string
+    related_mappings:
+      - OBA:VT0001139
+  
+  # metadata slots
+  # references:
+  #   slot_uri: dcterms:references
