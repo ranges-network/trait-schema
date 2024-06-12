@@ -38,11 +38,19 @@ def df_to_rdf(
         str: nquads/ttl representaiton of data
     """
     context = _get_context(schema) # generate jsonld context
+    
+    # create records (list of dicts) from dataframe and filter out null values
+    records = [
+        {k:v for k,v in rows.items() if pd.notnull(v)}  # keep non-null values
+        for rows in df.to_dict(orient="records")        # get rows
+    ]
+
+    # generate rdf
     rdf = jsonld.to_rdf(
-            {"@context": json.loads(context), "@graph": df.to_dict(orient="records")},
+            {"@context": json.loads(context), "@graph": records},
             {'format': 'application/n-quads'} # must use application/n-quad
     )        
-    
+
     return rdf
 
 
