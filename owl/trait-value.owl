@@ -1,3 +1,7 @@
+@prefix FOVT: <http://purl.obolibrary.org/obo/FOVT_> .
+@prefix OBA: <http://purl.obolibrary.org/obo/OBA_> .
+@prefix PATO: <http://purl.obolibrary.org/obo/PATO_> .
+@prefix UBERON: <http://purl.obolibrary.org/obo/UBERON_> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -7,455 +11,455 @@
 traitvalue:TraitValue a owl:Class ;
     rdfs:label "TraitValue" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
-            owl:onProperty traitvalue:year ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:total_length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:hind_foot_length ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:total_length_ambiguous ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:life_stage ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:catalogNumber ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:catalogNumber ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:testicle_description ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty traitvalue:vagina ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:hind_foot_length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:stateProvince ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:body_mass_ambiguous ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:tail_length_estimated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:countryCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:specificEpithet ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:fieldNotes ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty traitvalue:stateProvince ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:testicle_width ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:tail_length_estimated ],
+            owl:onProperty traitvalue:total_length_units_inferred ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:ear_from_notch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:total_length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:vagina ],
+            owl:onProperty traitvalue:nipple ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:testicle_length ],
+            owl:onProperty traitvalue:tragus_length ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:total_length_estimated ],
+            owl:onProperty traitvalue:fieldNotes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:ear_from_notch ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:institutionCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:ear_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:total_length_ambiguous ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:nipple ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:float ;
             owl:onProperty traitvalue:decimalLatitude ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:ear_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:body_mass ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:ear_length ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:order ],
+            owl:onProperty traitvalue:body_mass_units_inferred ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:lactation ],
+            owl:onProperty traitvalue:countryCode ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:fieldNotes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:testicle_length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:family ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:sex ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
             owl:onProperty traitvalue:forearm_length ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
-            owl:onProperty traitvalue:month ],
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:total_length_estimated ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:catalogNumber ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:genus ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:embryo_size_units_inferred ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:lactation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:body_mass_units_inferred ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:ear_length_units_inferred ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:decimalLongitude ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:boolean ;
             owl:onProperty traitvalue:tail_length_units_inferred ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:scientificName ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:testicle_length ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:body_mass_units_inferred ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:day ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:month ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:tragus_length ],
+            owl:onProperty traitvalue:catalogNumber ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty traitvalue:scientificName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:day ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:occurrenceID ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:lactation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:total_length_units_inferred ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:year ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:testicle_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:hind_foot_length_units_inferred ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:hind_foot_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:dynamicProperties ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:tail_length_estimated ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:testicle_description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty traitvalue:year ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:countryCode ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:sex ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:occurrenceID ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:ear_length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:tragus_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:stateProvince ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty traitvalue:embryo_size_units_inferred ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:decimalLatitude ],
+            owl:onProperty traitvalue:total_length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:dynamicProperties ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:nipple ],
+            owl:onProperty traitvalue:sex ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:genus ],
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:forearm_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:life_stage ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:tragus_length ],
+            owl:onProperty traitvalue:testicle_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:order ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:family ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:total_length_estimated ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty traitvalue:month ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:pregnancy ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:institutionCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:body_mass ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:testicle_size_units_inferred ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:specificEpithet ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:hind_foot_with_claw ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:testicle_size_units_inferred ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:embryo_count ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:tail_length_units_inferred ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:order ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty traitvalue:total_length_units_inferred ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:pregnancy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:tail_length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:life_stage ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:occurrenceRemarks ],
+            owl:onProperty traitvalue:embryo_length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:genus ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty traitvalue:day ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:ear_length_units_inferred ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty traitvalue:body_mass_units_inferred ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:order ],
+            owl:onProperty traitvalue:decimalLatitude ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:scientificName ],
+            owl:onProperty traitvalue:total_length_ambiguous ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:nipple ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty traitvalue:nipple_count ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty traitvalue:vagina ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:testicle_size_units_inferred ],
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:occurrenceRemarks ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:occurrenceRemarks ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:sex ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:institutionCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:body_mass ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:occurrenceRemarks ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty traitvalue:body_mass_ambiguous ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:genus ],
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:testicle_width ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:sex ],
+            owl:onProperty traitvalue:testicle_description ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:countryCode ],
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:tragus_length ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty traitvalue:nipple_count ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:pregnancy ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:ear_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:occurrenceID ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:embryo_size_units_inferred ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:institutionCode ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:fieldNotes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:testicle_width ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:decimalLongitude ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:tragus_length ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:ear_from_notch ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:forearm_length ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:fieldNotes ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:occurrenceRemarks ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:total_length ],
+            owl:onProperty traitvalue:family ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty traitvalue:tail_length ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:year ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:occurrenceRemarks ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:occurrenceID ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:decimalLongitude ],
+            owl:onProperty traitvalue:testicle_width ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:ear_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:testicle_size_units_inferred ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
-            owl:onProperty traitvalue:embryo_count ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
+            owl:minCardinality 0 ;
             owl:onProperty traitvalue:body_mass_ambiguous ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:stateProvince ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:pregnancy ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:body_mass ],
+            owl:onProperty traitvalue:specificEpithet ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty traitvalue:lactation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:tail_length_units_inferred ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:tail_length_estimated ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:total_length_estimated ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty traitvalue:dynamicProperties ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:catalogNumber ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:testicle_size_units_inferred ],
+            owl:onProperty traitvalue:hind_foot_length ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:embryo_count ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:body_mass_ambiguous ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
             owl:onProperty traitvalue:day ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:hind_foot_with_claw ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:family ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:pregnancy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:embryo_length ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:life_stage ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:hind_foot_length ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:ear_length ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:testicle_description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:tail_length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:embryo_length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:decimalLatitude ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:institutionCode ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:body_mass_units_inferred ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:decimalLongitude ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:specificEpithet ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:ear_length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:hind_foot_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:tail_length ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:tail_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:hind_foot_with_claw ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:hind_foot_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:total_length_ambiguous ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:occurrenceID ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:lactation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:dynamicProperties ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:lactation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:order ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:nipple ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:tail_length_estimated ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:total_length_estimated ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:forearm_length ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:sex ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:hind_foot_with_claw ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:embryo_length ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:total_length_estimated ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:year ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:body_mass ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:institutionCode ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:hind_foot_length ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:tail_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:embryo_size_units_inferred ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:specificEpithet ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty traitvalue:testicle_width ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:countryCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:specificEpithet ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:testicle_description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:float ;
-            owl:onProperty traitvalue:ear_from_notch ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:total_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:testicle_description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
-            owl:onProperty traitvalue:tail_length_estimated ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:countryCode ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:total_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty traitvalue:stateProvince ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:family ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:life_stage ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:genus ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:boolean ;
             owl:onProperty traitvalue:hind_foot_length_units_inferred ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty traitvalue:dynamicProperties ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty traitvalue:month ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:nipple ],
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:total_length ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:embryo_count ],
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:ear_from_notch ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty traitvalue:day ],
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:month ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:decimalLongitude ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty traitvalue:total_length_ambiguous ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty traitvalue:nipple_count ] ;
+            owl:onProperty traitvalue:ear_length_units_inferred ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:fieldNotes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:hind_foot_with_claw ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:embryo_count ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty traitvalue:nipple_count ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:testicle_size_units_inferred ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:float ;
+            owl:onProperty traitvalue:embryo_length ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:family ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:scientificName ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:scientificName ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:catalogNumber ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:embryo_length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:decimalLongitude ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty traitvalue:occurrenceID ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty traitvalue:embryo_size_units_inferred ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:body_mass ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:testicle_length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:ear_from_notch ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:tail_length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:decimalLatitude ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:hind_foot_length_units_inferred ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:pregnancy ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:forearm_length ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:order ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:genus ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:integer ;
+            owl:onProperty traitvalue:embryo_count ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:year ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:vagina ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:hind_foot_with_claw ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:life_stage ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty traitvalue:total_length ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty traitvalue:ear_length ] ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 <https://w3id.org/FOVT/linkml/traitvalue.owl.ttl> a owl:Ontology ;
@@ -464,16 +468,20 @@ traitvalue:TraitValue a owl:Class ;
 traitvalue:body_mass a owl:DatatypeProperty ;
     rdfs:label "body_mass" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The mass of specimen having the trait." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:VT0001259 .
 
 traitvalue:body_mass_ambiguous a owl:DatatypeProperty ;
     rdfs:label "body_mass_ambiguous" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the recorded body mass is ambiguous." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:body_mass_units_inferred a owl:DatatypeProperty ;
     rdfs:label "body_mass_units_inferred" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the body mass units were inferred. " ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:catalogNumber a owl:DatatypeProperty ;
@@ -484,21 +492,25 @@ traitvalue:catalogNumber a owl:DatatypeProperty ;
 traitvalue:countryCode a owl:DatatypeProperty ;
     rdfs:label "countryCode" ;
     rdfs:range xsd:string ;
+    skos:definition "The country where the specimen with the trait was found." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:day a owl:DatatypeProperty ;
     rdfs:label "day" ;
     rdfs:range xsd:integer ;
+    skos:definition "The day of the month that the trait was recorded." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:decimalLatitude a owl:DatatypeProperty ;
     rdfs:label "decimalLatitude" ;
     rdfs:range xsd:float ;
+    skos:definition "The latitude where the specimen with the trait was found." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:decimalLongitude a owl:DatatypeProperty ;
     rdfs:label "decimalLongitude" ;
     rdfs:range xsd:float ;
+    skos:definition "The longitude where the specimen with the trait was found." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:dynamicProperties a owl:DatatypeProperty ;
@@ -509,31 +521,40 @@ traitvalue:dynamicProperties a owl:DatatypeProperty ;
 traitvalue:ear_from_notch a owl:DatatypeProperty ;
     rdfs:label "ear_from_notch" ;
     rdfs:range xsd:float ;
+    skos:definition "Length of the ear from the notch to the tip." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:ear_length a owl:DatatypeProperty ;
     rdfs:label "ear_length" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The length of an external ear." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:0003426 .
 
 traitvalue:ear_length_units_inferred a owl:DatatypeProperty ;
     rdfs:label "ear_length_units_inferred" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the ear length units were inferred. " ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:embryo_count a owl:DatatypeProperty ;
     rdfs:label "embryo_count" ;
     rdfs:range xsd:integer ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The number of embryos observed in uterus." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch UBERON:0000995,
+        UBERON:0009098 .
 
 traitvalue:embryo_length a owl:DatatypeProperty ;
     rdfs:label "embryo_length" ;
     rdfs:range xsd:float ;
+    skos:definition "The length of an embryo." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:embryo_size_units_inferred a owl:DatatypeProperty ;
     rdfs:label "embryo_size_units_inferred" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the embryo size units were inferred. " ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:family a owl:DatatypeProperty ;
@@ -549,7 +570,9 @@ traitvalue:fieldNotes a owl:DatatypeProperty ;
 traitvalue:forearm_length a owl:DatatypeProperty ;
     rdfs:label "forearm_length" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The length of a forearm." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch FOVT:0001379 .
 
 traitvalue:genus a owl:DatatypeProperty ;
     rdfs:label "genus" ;
@@ -559,17 +582,22 @@ traitvalue:genus a owl:DatatypeProperty ;
 traitvalue:hind_foot_length a owl:DatatypeProperty ;
     rdfs:label "hind_foot_length" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The lengh of a hindfoot." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:1000049 .
 
 traitvalue:hind_foot_length_units_inferred a owl:DatatypeProperty ;
     rdfs:label "hind_foot_length_units_inferred" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the hind foot length units were inferred. " ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:hind_foot_with_claw a owl:DatatypeProperty ;
     rdfs:label "hind_foot_with_claw" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "A length measurement of a hindfoot that includes the nail." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch FOVT:0000003 .
 
 traitvalue:institutionCode a owl:DatatypeProperty ;
     rdfs:label "institutionCode" ;
@@ -579,31 +607,41 @@ traitvalue:institutionCode a owl:DatatypeProperty ;
 traitvalue:lactation a owl:DatatypeProperty ;
     rdfs:label "lactation" ;
     rdfs:range xsd:string ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "Secretion or expression of milk from the mammary glands." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch UBERON:0001911 .
 
 traitvalue:life_stage a owl:DatatypeProperty ;
     rdfs:label "life_stage" ;
     rdfs:range xsd:string ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The developmental stage of the life cycle of the organism represented." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch UBERON:0000105 .
 
 traitvalue:month a owl:DatatypeProperty ;
     rdfs:label "month" ;
     rdfs:range xsd:integer ;
+    skos:definition "The month that the trait was recorded." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:nipple a owl:DatatypeProperty ;
     rdfs:label "nipple" ;
     rdfs:range xsd:string ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The morphology of the specimen's nipple(s)." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:VT0006078 .
 
 traitvalue:nipple_count a owl:DatatypeProperty ;
     rdfs:label "nipple_count" ;
     rdfs:range xsd:integer ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The number of nipples the specimen has." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:VT1000206 .
 
 traitvalue:occurrenceID a owl:DatatypeProperty ;
     rdfs:label "occurrenceID" ;
     rdfs:range xsd:string ;
+    skos:definition "Identifies the record that contains the trait data values." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:occurrenceRemarks a owl:DatatypeProperty ;
@@ -619,7 +657,9 @@ traitvalue:order a owl:DatatypeProperty ;
 traitvalue:pregnancy a owl:DatatypeProperty ;
     rdfs:label "pregnancy" ;
     rdfs:range xsd:string ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The specimen's uterus contains a developing embryo, fetus, or unborn offspring." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch UBERON:0000995 .
 
 traitvalue:scientificName a owl:DatatypeProperty ;
     rdfs:label "scientificName" ;
@@ -629,7 +669,9 @@ traitvalue:scientificName a owl:DatatypeProperty ;
 traitvalue:sex a owl:DatatypeProperty ;
     rdfs:label "sex" ;
     rdfs:range xsd:string ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The biological sex of the specimen." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch PATO:0000047 .
 
 traitvalue:specificEpithet a owl:DatatypeProperty ;
     rdfs:label "specificEpithet" ;
@@ -639,76 +681,97 @@ traitvalue:specificEpithet a owl:DatatypeProperty ;
 traitvalue:stateProvince a owl:DatatypeProperty ;
     rdfs:label "stateProvince" ;
     rdfs:range xsd:string ;
+    skos:definition "The state where the specimen with the trait was found." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:tail_length a owl:DatatypeProperty ;
     rdfs:label "tail_length" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The length of the specimen's tail." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:VT0002758 .
 
 traitvalue:tail_length_estimated a owl:DatatypeProperty ;
     rdfs:label "tail_length_estimated" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the tail length was estimated." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:tail_length_units_inferred a owl:DatatypeProperty ;
     rdfs:label "tail_length_units_inferred" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the tail length units were inferred. " ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:testicle_description a owl:DatatypeProperty ;
     rdfs:label "testicle_description" ;
     rdfs:range xsd:string ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The morphology of a testis." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:VT0001146 .
 
 traitvalue:testicle_length a owl:DatatypeProperty ;
     rdfs:label "testicle_length" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The length of the long axis of testis spheroid." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch FOVT:0001057 .
 
 traitvalue:testicle_size_units_inferred a owl:DatatypeProperty ;
     rdfs:label "testicle_size_units_inferred" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the testis size units were inferred. " ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:testicle_width a owl:DatatypeProperty ;
     rdfs:label "testicle_width" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The length of the short axis of testis spheroid (perpendicular to long axis at midpoint)." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch FOVT:0001368 .
 
 traitvalue:total_length a owl:DatatypeProperty ;
     rdfs:label "total_length" ;
     rdfs:range xsd:float ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:VT0001256 .
 
 traitvalue:total_length_ambiguous a owl:DatatypeProperty ;
     rdfs:label "total_length_ambiguous" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the total length recorded is ambiguous." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:total_length_estimated a owl:DatatypeProperty ;
     rdfs:label "total_length_estimated" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the total length was estimated." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:total_length_units_inferred a owl:DatatypeProperty ;
     rdfs:label "total_length_units_inferred" ;
     rdfs:range xsd:boolean ;
+    skos:definition "Specifies if the total length units were inferred. " ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:tragus_length a owl:DatatypeProperty ;
     rdfs:label "tragus_length" ;
     rdfs:range xsd:float ;
+    skos:definition "The length of the specimen's tragus." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 traitvalue:vagina a owl:DatatypeProperty ;
     rdfs:label "vagina" ;
     rdfs:range xsd:string ;
-    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
+    skos:definition "The degree of perforation of the female vagina." ;
+    skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> ;
+    skos:relatedMatch OBA:VT0001139 .
 
 traitvalue:year a owl:DatatypeProperty ;
     rdfs:label "year" ;
     rdfs:range xsd:integer ;
+    skos:definition "The year that the trait was recorded." ;
     skos:inScheme <https://w3id.org/FOVT/linkml/traitvalue> .
 
 

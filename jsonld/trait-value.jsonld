@@ -23,8 +23,16 @@
       "prefix_reference": "http://purl.obolibrary.org/obo/OBA_"
     },
     {
-      "prefix_prefix": "dc",
-      "prefix_reference": "http://purl.org/dc/elements/1.1/"
+      "prefix_prefix": "UBERON",
+      "prefix_reference": "http://purl.obolibrary.org/obo/UBERON_"
+    },
+    {
+      "prefix_prefix": "PATO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/PATO_"
+    },
+    {
+      "prefix_prefix": "dcterms",
+      "prefix_reference": "http://purl.org/dc/terms/"
     }
   ],
   "default_prefix": "traitvalue",
@@ -343,6 +351,7 @@
     {
       "name": "occurrenceID",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#occurrenceID",
+      "description": "Identifies the record that contains the trait data values.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#occurrenceID",
       "owner": "TraitValue",
@@ -439,6 +448,7 @@
     {
       "name": "day",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#day",
+      "description": "The day of the month that the trait was recorded.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#day",
       "owner": "TraitValue",
@@ -451,6 +461,7 @@
     {
       "name": "month",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#month",
+      "description": "The month that the trait was recorded.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#month",
       "owner": "TraitValue",
@@ -463,6 +474,7 @@
     {
       "name": "year",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#year",
+      "description": "The year that the trait was recorded.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#year",
       "owner": "TraitValue",
@@ -475,6 +487,7 @@
     {
       "name": "countryCode",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#countryCode",
+      "description": "The country where the specimen with the trait was found.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#countryCode",
       "owner": "TraitValue",
@@ -487,6 +500,7 @@
     {
       "name": "stateProvince",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#stateProvince",
+      "description": "The state where the specimen with the trait was found.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#stateProvince",
       "owner": "TraitValue",
@@ -499,6 +513,7 @@
     {
       "name": "decimalLatitude",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLatitude",
+      "description": "The latitude where the specimen with the trait was found.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLatitude",
       "owner": "TraitValue",
@@ -511,6 +526,7 @@
     {
       "name": "decimalLongitude",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLongitude",
+      "description": "The longitude where the specimen with the trait was found.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#decimalLongitude",
       "owner": "TraitValue",
@@ -559,7 +575,11 @@
     {
       "name": "body_mass",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass",
+      "description": "The mass of specimen having the trait.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_VT0001259"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass",
       "owner": "TraitValue",
       "domain_of": [
@@ -571,6 +591,7 @@
     {
       "name": "body_mass_ambiguous",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_ambiguous",
+      "description": "Specifies if the recorded body mass is ambiguous.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_ambiguous",
       "owner": "TraitValue",
@@ -583,6 +604,7 @@
     {
       "name": "body_mass_units_inferred",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_units_inferred",
+      "description": "Specifies if the body mass units were inferred. ",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass_units_inferred",
       "owner": "TraitValue",
@@ -595,6 +617,7 @@
     {
       "name": "ear_from_notch",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_from_notch",
+      "description": "Length of the ear from the notch to the tip.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_from_notch",
       "owner": "TraitValue",
@@ -607,7 +630,11 @@
     {
       "name": "ear_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length",
+      "description": "The length of an external ear.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_0003426"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length",
       "owner": "TraitValue",
       "domain_of": [
@@ -619,6 +646,7 @@
     {
       "name": "ear_length_units_inferred",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length_units_inferred",
+      "description": "Specifies if the ear length units were inferred. ",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length_units_inferred",
       "owner": "TraitValue",
@@ -631,7 +659,12 @@
     {
       "name": "embryo_count",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_count",
+      "description": "The number of embryos observed in uterus.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/UBERON_0000995",
+        "http://purl.obolibrary.org/obo/UBERON_0009098"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_count",
       "owner": "TraitValue",
       "domain_of": [
@@ -643,6 +676,7 @@
     {
       "name": "embryo_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_length",
+      "description": "The length of an embryo.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_length",
       "owner": "TraitValue",
@@ -655,6 +689,7 @@
     {
       "name": "embryo_size_units_inferred",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_size_units_inferred",
+      "description": "Specifies if the embryo size units were inferred. ",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_size_units_inferred",
       "owner": "TraitValue",
@@ -667,7 +702,11 @@
     {
       "name": "forearm_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#forearm_length",
+      "description": "The length of a forearm.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/FOVT_0001379"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#forearm_length",
       "owner": "TraitValue",
       "domain_of": [
@@ -679,7 +718,11 @@
     {
       "name": "hind_foot_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length",
+      "description": "The lengh of a hindfoot.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_1000049"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length",
       "owner": "TraitValue",
       "domain_of": [
@@ -691,6 +734,7 @@
     {
       "name": "hind_foot_length_units_inferred",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length_units_inferred",
+      "description": "Specifies if the hind foot length units were inferred. ",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length_units_inferred",
       "owner": "TraitValue",
@@ -703,7 +747,11 @@
     {
       "name": "hind_foot_with_claw",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_with_claw",
+      "description": "A length measurement of a hindfoot that includes the nail.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/FOVT_0000003"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_with_claw",
       "owner": "TraitValue",
       "domain_of": [
@@ -715,7 +763,11 @@
     {
       "name": "lactation",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#lactation",
+      "description": "Secretion or expression of milk from the mammary glands.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/UBERON_0001911"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#lactation",
       "owner": "TraitValue",
       "domain_of": [
@@ -727,7 +779,11 @@
     {
       "name": "life_stage",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#life_stage",
+      "description": "The developmental stage of the life cycle of the organism represented.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/UBERON_0000105"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#life_stage",
       "owner": "TraitValue",
       "domain_of": [
@@ -739,7 +795,11 @@
     {
       "name": "nipple",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple",
+      "description": "The morphology of the specimen's nipple(s).",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_VT0006078"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple",
       "owner": "TraitValue",
       "domain_of": [
@@ -751,7 +811,11 @@
     {
       "name": "nipple_count",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple_count",
+      "description": "The number of nipples the specimen has.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_VT1000206"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#nipple_count",
       "owner": "TraitValue",
       "domain_of": [
@@ -763,7 +827,11 @@
     {
       "name": "pregnancy",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#pregnancy",
+      "description": "The specimen's uterus contains a developing embryo, fetus, or unborn offspring.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/UBERON_0000995"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#pregnancy",
       "owner": "TraitValue",
       "domain_of": [
@@ -775,7 +843,11 @@
     {
       "name": "sex",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#sex",
+      "description": "The biological sex of the specimen.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/PATO_0000047"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#sex",
       "owner": "TraitValue",
       "domain_of": [
@@ -787,7 +859,11 @@
     {
       "name": "tail_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length",
+      "description": "The length of the specimen's tail.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_VT0002758"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length",
       "owner": "TraitValue",
       "domain_of": [
@@ -799,6 +875,7 @@
     {
       "name": "tail_length_estimated",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_estimated",
+      "description": "Specifies if the tail length was estimated.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_estimated",
       "owner": "TraitValue",
@@ -811,6 +888,7 @@
     {
       "name": "tail_length_units_inferred",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_units_inferred",
+      "description": "Specifies if the tail length units were inferred. ",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length_units_inferred",
       "owner": "TraitValue",
@@ -823,7 +901,11 @@
     {
       "name": "testicle_description",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_description",
+      "description": "The morphology of a testis.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_VT0001146"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_description",
       "owner": "TraitValue",
       "domain_of": [
@@ -835,7 +917,11 @@
     {
       "name": "testicle_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_length",
+      "description": "The length of the long axis of testis spheroid.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/FOVT_0001057"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_length",
       "owner": "TraitValue",
       "domain_of": [
@@ -847,6 +933,7 @@
     {
       "name": "testicle_size_units_inferred",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_size_units_inferred",
+      "description": "Specifies if the testis size units were inferred. ",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_size_units_inferred",
       "owner": "TraitValue",
@@ -859,7 +946,11 @@
     {
       "name": "testicle_width",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_width",
+      "description": "The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/FOVT_0001368"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_width",
       "owner": "TraitValue",
       "domain_of": [
@@ -871,7 +962,11 @@
     {
       "name": "total_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length",
+      "description": "Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_VT0001256"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length",
       "owner": "TraitValue",
       "domain_of": [
@@ -883,6 +978,7 @@
     {
       "name": "total_length_ambiguous",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_ambiguous",
+      "description": "Specifies if the total length recorded is ambiguous.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_ambiguous",
       "owner": "TraitValue",
@@ -895,6 +991,7 @@
     {
       "name": "total_length_estimated",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_estimated",
+      "description": "Specifies if the total length was estimated.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_estimated",
       "owner": "TraitValue",
@@ -907,6 +1004,7 @@
     {
       "name": "total_length_units_inferred",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_units_inferred",
+      "description": "Specifies if the total length units were inferred. ",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length_units_inferred",
       "owner": "TraitValue",
@@ -919,6 +1017,7 @@
     {
       "name": "tragus_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tragus_length",
+      "description": "The length of the specimen's tragus.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tragus_length",
       "owner": "TraitValue",
@@ -931,7 +1030,11 @@
     {
       "name": "vagina",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#vagina",
+      "description": "The degree of perforation of the female vagina.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/OBA_VT0001139"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#vagina",
       "owner": "TraitValue",
       "domain_of": [
@@ -1005,9 +1108,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "trait-value.yml",
-  "source_file_date": "2024-06-08T00:42:48",
-  "source_file_size": 3390,
-  "generation_date": "2024-06-09T02:20:24",
+  "source_file_date": "2024-06-12T15:34:48",
+  "source_file_size": 7536,
+  "generation_date": "2024-06-12T15:35:08",
   "@type": "SchemaDefinition",
   "@context": [
     "https://w3id.org/linkml/types.context.jsonld",
