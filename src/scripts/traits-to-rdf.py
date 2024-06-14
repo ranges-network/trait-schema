@@ -35,7 +35,7 @@ def df_to_rdf(
         schema (str): path to linkml schema file
 
     Returns:
-        str: nquads/ttl representaiton of data
+        str: nquads/ttl representation of data
     """
     context = _get_context(schema) # generate jsonld context
     
@@ -71,7 +71,7 @@ def main(
         data_output (str): file to save only the RDF data
 
     Raises:
-        Exception: if the extenstion of input data file is not recogized
+        Exception: if the extension of input data file is not recogized
     """
     # get owl represenation of schema
     if (output is not None) or (owl_output is not None):
