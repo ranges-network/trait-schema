@@ -127,7 +127,10 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
               help="output file for RDF data",
               default=None)
 def cli(input, schema, output, owl_output, data_output):
-    """transforms the input file into RDF"""
+    """transforms the input file into RDF
+    
+    e.g.: python traits-to-rdf.py -i input.csv -s shema.yml -o data.ttl   
+    """
     # call main program
     main(input, schema, output, owl_output, data_output)
 
