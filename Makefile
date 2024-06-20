@@ -40,6 +40,9 @@ owl:
 shacl:
 	gen-shacl $(SOURCE_SCHEMA_DIR)/trait-value.yml > shacl/trait-value.shacl 
 
+field-mappings:
+	python src/scripts/field-mappings-info.py
+
 ## remove products
 clean-products:
 # don't delete README files

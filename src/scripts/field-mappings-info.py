@@ -4,7 +4,7 @@ from git_root import git_root
 
 def main():
     input = git_root('jsonld/trait-value.jsonld')
-    output = git_root('field-mapping/field-mappings.csv')
+    output = git_root('field-mappings/field-mappings.csv')
 
     with open(input) as f:
         schema_dict  = json.load(f)
