@@ -200,6 +200,12 @@ slots:
     range: string
     related_mappings:
       - dwc:lifeStage
+  mammary_count:
+    description: >-
+      The number of mammary glands present in the specimen.
+    range: integer
+    related_mappings:
+      - UBERON:0001911
   nipple:
     description: >-
       The morphology of the specimen's nipple(s).
