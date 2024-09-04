@@ -8,6 +8,7 @@ prefixes:
   UBERON:   http://purl.obolibrary.org/obo/UBERON_
   PATO:   http://purl.obolibrary.org/obo/PATO_
   dcterms: http://purl.org/dc/terms/
+  dwc: http://rs.tdwg.org/dwc/terms/
 
 imports:
   - linkml:types
@@ -195,10 +196,10 @@ slots:
       - UBERON:0001911
   life_stage:
     description: >-
-      The developmental stage of the life cycle of the organism represented.
+      The age class or life stage of the dwc:Organism(s) at the time the dwc:Occurrence was recorded.
     range: string
     related_mappings:
-      - UBERON:0000105
+      - dwc:lifeStage
   nipple:
     description: >-
       The morphology of the specimen's nipple(s).
