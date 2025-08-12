@@ -127,7 +127,9 @@ slots:
       The mass of specimen having the trait.
     range: float
     related_mappings: 
-      - "OBA:VT0001259"
+      - OBA:VT0001259 # body mass
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001259 # body mass 
   body_mass_ambiguous:
     description: >-
       Specifies if the recorded body mass is ambiguous.
@@ -140,12 +142,16 @@ slots:
     description: >-
       Length of the ear from the notch to the tip.
     range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000005 # ear length to notch
   ear_length:
     description: >-
       The length of an external ear.
     range: float
     related_mappings:
-      - OBA:0003426
+      - OBA:0003426 # external ear length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:0003426 # external ear length
   ear_length_units_inferred:
     description: >-
       Specifies if the ear length units were inferred. 
@@ -155,8 +161,10 @@ slots:
       The number of embryos observed in uterus.
     range: integer
     related_mappings:
-      - UBERON:0000995
-      - UBERON:0009098
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  UBERON:0000995 # uterus
   embryo_length:
     description: >-
       The length of an embryo.
@@ -171,13 +179,17 @@ slots:
       The length of a forearm.
     range: float
     related_mappings:
-      - FOVT:0001379
+      - FOVT:0001379 # forearm length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001379 # forearm length
   hind_foot_length:
     description: >-
       The lengh of a hindfoot.
     range: float
     related_mappings:
-      - OBA:1000049
+      - OBA:1000049 # pes length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:1000049 # pes length
   hind_foot_length_units_inferred:
     description: >-
       Specifies if the hind foot length units were inferred. 
@@ -187,55 +199,65 @@ slots:
       A length measurement of a hindfoot that includes the nail.
     range: float
     related_mappings:
-      - FOVT:0000003
+      - FOVT:0000003 # pes length with nail
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000003 # pes length with nail
   lactation:
     description: >-
       Secretion or expression of milk from the mammary glands.
     range: string
     related_mappings:
-      - UBERON:0001911
+      - UBERON:0001911 # mammary gland
   life_stage:
     description: >-
       The age class or life stage of the dwc:Organism(s) at the time the dwc:Occurrence was recorded.
     range: string
     related_mappings:
       - dwc:lifeStage
+      - UBERON:0000105 # life cycle stage
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000105 # life cycle stage
   mammary_count:
     description: >-
       The number of mammary glands present in the specimen.
     range: integer
     related_mappings:
-      - UBERON:0001911
+      - UBERON:0001911 # mammary gland
   nipple:
     description: >-
       The morphology of the specimen's nipple(s).
     range: string
     related_mappings:
-      - OBA:VT0006078
+      - OBA:VT0006078 # nipple morphology trait
   nipple_count:
     description: >-
       The number of nipples the specimen has.
     range: integer
     related_mappings:
-      - OBA:VT1000206
+      - OBA:VT1000206 # nipple quantity
   pregnancy:
     description: >-
       The specimen's uterus contains a developing embryo, fetus, or unborn offspring.
     range: string
     related_mappings:
-      - UBERON:0000995
+      - UBERON:0000995 # uterus
+      - GO:0007565 # pregnancy
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000995 # uterus
   sex:
     description: >-
       The biological sex of the specimen.
     range: string
     related_mappings:
-      - PATO:0000047
+      - PATO:0000047 # biological sex
   tail_length:
     description: >-
       The length of the specimen's tail.
     range: float
     related_mappings:
-      - OBA:VT0002758
+      - OBA:VT0002758 # tail length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0002758 # tail length
   tail_length_estimated:
     description: >-
       Specifies if the tail length was estimated.
@@ -249,13 +271,17 @@ slots:
       The morphology of a testis.
     range: string
     related_mappings:
-      - OBA:VT0001146
+      - OBA:VT0001146 # testes morphology trait
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001146 # testes morphology trait
   testicle_length:
     description: >-
       The length of the long axis of testis spheroid.
     range: float
     related_mappings:
-      - FOVT:0001057
+      - FOVT:0001057 # testis length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057 # testis length
   testicle_size_units_inferred:
     description: >-
       Specifies if the testis size units were inferred. 
@@ -265,13 +291,17 @@ slots:
       The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).
     range: float
     related_mappings:
-      - FOVT:0001368
+      - FOVT:0001368 # testis width
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368 # testis width
   total_length:
     description: >-
       Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.
     range: float
     related_mappings: 
-      - OBA:VT0001256
+      - OBA:VT0001256 # body length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001256 # body length
   total_length_ambiguous:
     description: >-
       Specifies if the total length recorded is ambiguous.
@@ -288,13 +318,13 @@ slots:
     description: >-
       The length of the specimen's tragus.
     range: float
+    related_mappings:
+      - UBERON:0010887 # tragus
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0010887 # tragus
   vagina:
     description: >-
       The degree of perforation of the female vagina.
     range: string
     related_mappings:
       - OBA:VT0001139
-  
-  # metadata slots
-  # references:
-  #   slot_uri: dcterms:references
