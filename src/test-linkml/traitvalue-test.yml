@@ -36,7 +36,6 @@ classes:
       occurrenceRemarks:
       body_mass:
         range: float
-          range: float
         related_mappings: 
           - OBA:VT0001259 # body mass
         annotations:
@@ -51,10 +50,10 @@ classes:
       total_length:
         range: float
   
-  Container:
-    tree_root: true
-    attributes:
-      trait_values:
-        multivalued: true
-        inlined_as_list: true
-        range: TraitValue
+  # Container:
+  #   tree_root: true
+  #   attributes:
+  #     trait_values:
+  #       multivalued: true
+  #       inlined_as_list: true
+  #       range: TraitValue
