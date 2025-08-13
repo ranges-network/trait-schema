@@ -36,13 +36,18 @@ classes:
       occurrenceRemarks:
       body_mass:
         range: float
-        related_mappings:
-          - OBA:VT0001259
+          range: float
+        related_mappings: 
+          - OBA:VT0001259 # body mass
+        annotations:
+          pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001259 # body mass 
       sex:
       tail_length:
         range: float
+        related_mappings:
+          - OBA:VT0002758 # tail length
         annotations:
-          is_about: OBA:VT0002758
+          pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0002758 # tail length
       total_length:
         range: float
   
