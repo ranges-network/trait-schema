@@ -23,6 +23,10 @@
       "prefix_reference": "http://purl.obolibrary.org/obo/OBA_"
     },
     {
+      "prefix_prefix": "GO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/GO_"
+    },
+    {
       "prefix_prefix": "UBERON",
       "prefix_reference": "http://purl.obolibrary.org/obo/UBERON_"
     },
@@ -33,6 +37,10 @@
     {
       "prefix_prefix": "dcterms",
       "prefix_reference": "http://purl.org/dc/terms/"
+    },
+    {
+      "prefix_prefix": "dwc",
+      "prefix_reference": "http://rs.tdwg.org/dwc/terms/"
     }
   ],
   "default_prefix": "traitvalue",
@@ -575,6 +583,13 @@
     {
       "name": "body_mass",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#body_mass",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf OBA:VT0001259",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The mass of specimen having the trait.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -617,6 +632,13 @@
     {
       "name": "ear_from_notch",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_from_notch",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf FOVT:0000005",
+          "@type": "Annotation"
+        }
+      ],
       "description": "Length of the ear from the notch to the tip.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_from_notch",
@@ -630,6 +652,13 @@
     {
       "name": "ear_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#ear_length",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf OBA:0003426",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The length of an external ear.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -659,6 +688,13 @@
     {
       "name": "embryo_count",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#embryo_count",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf  UBERON:0000995",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The number of embryos observed in uterus.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -702,6 +738,13 @@
     {
       "name": "forearm_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#forearm_length",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf FOVT:0001379",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The length of a forearm.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -718,6 +761,13 @@
     {
       "name": "hind_foot_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_length",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf OBA:1000049",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The lengh of a hindfoot.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -747,6 +797,13 @@
     {
       "name": "hind_foot_with_claw",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#hind_foot_with_claw",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf FOVT:0000003",
+          "@type": "Annotation"
+        }
+      ],
       "description": "A length measurement of a hindfoot that includes the nail.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -779,9 +836,17 @@
     {
       "name": "life_stage",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#life_stage",
-      "description": "The developmental stage of the life cycle of the organism represented.",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf UBERON:0000105",
+          "@type": "Annotation"
+        }
+      ],
+      "description": "The age class or life stage of the dwc:Organism(s) at the time the dwc:Occurrence was recorded.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
+        "http://rs.tdwg.org/dwc/terms/lifeStage",
         "http://purl.obolibrary.org/obo/UBERON_0000105"
       ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#life_stage",
@@ -790,6 +855,18 @@
         "TraitValue"
       ],
       "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "mammary_count",
+      "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#mammary_count",
+      "description": "The number of mammary glands present in the specimen.",
+      "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/UBERON_0001911"
+      ],
+      "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#mammary_count",
+      "range": "integer",
       "@type": "SlotDefinition"
     },
     {
@@ -827,10 +904,18 @@
     {
       "name": "pregnancy",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#pregnancy",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf UBERON:0000995",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The specimen's uterus contains a developing embryo, fetus, or unborn offspring.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
-        "http://purl.obolibrary.org/obo/UBERON_0000995"
+        "http://purl.obolibrary.org/obo/UBERON_0000995",
+        "http://purl.obolibrary.org/obo/GO_0007565"
       ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#pregnancy",
       "owner": "TraitValue",
@@ -859,6 +944,13 @@
     {
       "name": "tail_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tail_length",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf OBA:VT0002758",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The length of the specimen's tail.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -901,6 +993,13 @@
     {
       "name": "testicle_description",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_description",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf OBA:VT0001146",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The morphology of a testis.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -917,6 +1016,13 @@
     {
       "name": "testicle_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_length",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf FOVT:0001057",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The length of the long axis of testis spheroid.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -946,6 +1052,13 @@
     {
       "name": "testicle_width",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#testicle_width",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf FOVT:0001368",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -962,6 +1075,13 @@
     {
       "name": "total_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#total_length",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf OBA:VT0001256",
+          "@type": "Annotation"
+        }
+      ],
       "description": "Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
       "related_mappings": [
@@ -1017,8 +1137,18 @@
     {
       "name": "tragus_length",
       "definition_uri": "http://purl.obolibrary.org/obo/FOVT/data#tragus_length",
+      "annotations": [
+        {
+          "tag": "pun_as",
+          "value": "rdf:type owl:Class; rdfs:subClassOf UBERON:0010887",
+          "@type": "Annotation"
+        }
+      ],
       "description": "The length of the specimen's tragus.",
       "from_schema": "https://w3id.org/FOVT/linkml/traitvalue",
+      "related_mappings": [
+        "http://purl.obolibrary.org/obo/UBERON_0010887"
+      ],
       "slot_uri": "http://purl.obolibrary.org/obo/FOVT/data#tragus_length",
       "owner": "TraitValue",
       "domain_of": [
@@ -1108,9 +1238,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "trait-value.yml",
-  "source_file_date": "2024-06-12T15:34:48",
-  "source_file_size": 7536,
-  "generation_date": "2024-06-12T19:56:19",
+  "source_file_date": "2025-08-13T17:50:42",
+  "source_file_size": 9604,
+  "generation_date": "2025-08-13T17:50:47",
   "@type": "SchemaDefinition",
   "@context": [
     "https://w3id.org/linkml/types.context.jsonld",
