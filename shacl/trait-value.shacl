@@ -6,246 +6,12 @@
 traitvalue:TraitValue a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:integer ;
-            sh:description "The number of embryos observed in uterus." ;
+    sh:property [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the total length was estimated." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 24 ;
-            sh:path traitvalue:embryo_count ],
-        [ sh:datatype xsd:string ;
-            sh:description "The morphology of a testis." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 40 ;
-            sh:path traitvalue:testicle_description ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the body mass units were inferred. " ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path traitvalue:body_mass_units_inferred ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the total length units were inferred. " ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 47 ;
-            sh:path traitvalue:total_length_units_inferred ],
-        [ sh:datatype xsd:float ;
-            sh:description "The latitude where the specimen with the trait was found." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path traitvalue:decimalLatitude ],
-        [ sh:datatype xsd:integer ;
-            sh:description "The month that the trait was recorded." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path traitvalue:month ],
-        [ sh:datatype xsd:integer ;
-            sh:description "The number of nipples the specimen has." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 34 ;
-            sh:path traitvalue:nipple_count ],
-        [ sh:datatype xsd:float ;
-            sh:description "The mass of specimen having the trait." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path traitvalue:body_mass ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the tail length was estimated." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 38 ;
-            sh:path traitvalue:tail_length_estimated ],
-        [ sh:datatype xsd:float ;
-            sh:description "The length of the specimen's tail." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 37 ;
-            sh:path traitvalue:tail_length ],
-        [ sh:datatype xsd:float ;
-            sh:description "A length measurement of a hindfoot that includes the nail." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 30 ;
-            sh:path traitvalue:hind_foot_with_claw ],
-        [ sh:datatype xsd:float ;
-            sh:description "The longitude where the specimen with the trait was found." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path traitvalue:decimalLongitude ],
-        [ sh:datatype xsd:string ;
-            sh:description "Identifies the record that contains the trait data values." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path traitvalue:occurrenceID ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path traitvalue:catalogNumber ],
-        [ sh:datatype xsd:float ;
-            sh:description "Length of the ear from the notch to the tip." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 21 ;
-            sh:path traitvalue:ear_from_notch ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the embryo size units were inferred. " ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 26 ;
-            sh:path traitvalue:embryo_size_units_inferred ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the recorded body mass is ambiguous." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path traitvalue:body_mass_ambiguous ],
-        [ sh:datatype xsd:float ;
-            sh:description "The length of an external ear." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 22 ;
-            sh:path traitvalue:ear_length ],
-        [ sh:datatype xsd:string ;
-            sh:description "The biological sex of the specimen." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 36 ;
-            sh:path traitvalue:sex ],
-        [ sh:datatype xsd:float ;
-            sh:description "Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 44 ;
-            sh:path traitvalue:total_length ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path traitvalue:institutionCode ],
-        [ sh:datatype xsd:string ;
-            sh:description "The specimen's uterus contains a developing embryo, fetus, or unborn offspring." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 35 ;
-            sh:path traitvalue:pregnancy ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the ear length units were inferred. " ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 23 ;
-            sh:path traitvalue:ear_length_units_inferred ],
-        [ sh:datatype xsd:float ;
-            sh:description "The lengh of a hindfoot." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 28 ;
-            sh:path traitvalue:hind_foot_length ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 5 ;
-            sh:path traitvalue:family ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 16 ;
-            sh:path traitvalue:occurrenceRemarks ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path traitvalue:fieldNotes ],
-        [ sh:datatype xsd:string ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 6 ;
-            sh:path traitvalue:genus ],
-        [ sh:datatype xsd:string ;
-            sh:description "Secretion or expression of milk from the mammary glands." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 31 ;
-            sh:path traitvalue:lactation ],
-        [ sh:datatype xsd:float ;
-            sh:description "The length of the long axis of testis spheroid." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 41 ;
-            sh:path traitvalue:testicle_length ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the tail length units were inferred. " ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 39 ;
-            sh:path traitvalue:tail_length_units_inferred ],
-        [ sh:datatype xsd:float ;
-            sh:description "The length of a forearm." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 27 ;
-            sh:path traitvalue:forearm_length ],
-        [ sh:datatype xsd:float ;
-            sh:description "The length of the short axis of testis spheroid (perpendicular to long axis at midpoint)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 43 ;
-            sh:path traitvalue:testicle_width ],
-        [ sh:datatype xsd:string ;
-            sh:description "The morphology of the specimen's nipple(s)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 33 ;
-            sh:path traitvalue:nipple ],
-        [ sh:datatype xsd:float ;
-            sh:description "The length of an embryo." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 25 ;
-            sh:path traitvalue:embryo_length ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the total length recorded is ambiguous." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 45 ;
-            sh:path traitvalue:total_length_ambiguous ],
-        [ sh:datatype xsd:float ;
-            sh:description "The length of the specimen's tragus." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 48 ;
-            sh:path traitvalue:tragus_length ],
-        [ sh:datatype xsd:string ;
-            sh:description "The state where the specimen with the trait was found." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path traitvalue:stateProvince ],
-        [ sh:datatype xsd:integer ;
-            sh:description "The year that the trait was recorded." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path traitvalue:year ],
-        [ sh:datatype xsd:string ;
-            sh:description "The developmental stage of the life cycle of the organism represented." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 32 ;
-            sh:path traitvalue:life_stage ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the hind foot length units were inferred. " ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 29 ;
-            sh:path traitvalue:hind_foot_length_units_inferred ],
+            sh:order 46 ;
+            sh:path traitvalue:total_length_estimated ],
         [ sh:datatype xsd:boolean ;
             sh:description "Specifies if the testis size units were inferred. " ;
             sh:maxCount 1 ;
@@ -255,47 +21,281 @@ traitvalue:TraitValue a sh:NodeShape ;
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 15 ;
-            sh:path traitvalue:dynamicProperties ],
+            sh:order 2 ;
+            sh:path traitvalue:catalogNumber ],
+        [ sh:datatype xsd:float ;
+            sh:description "The longitude where the specimen with the trait was found." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path traitvalue:decimalLongitude ],
+        [ sh:datatype xsd:float ;
+            sh:description "The mass of specimen having the trait." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path traitvalue:body_mass ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the tail length units were inferred. " ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 39 ;
+            sh:path traitvalue:tail_length_units_inferred ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path traitvalue:scientificName ],
+        [ sh:datatype xsd:string ;
+            sh:description "The age class or life stage of the dwc:Organism(s) at the time the dwc:Occurrence was recorded." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 32 ;
+            sh:path traitvalue:life_stage ],
+        [ sh:datatype xsd:integer ;
+            sh:description "The number of nipples the specimen has." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 34 ;
+            sh:path traitvalue:nipple_count ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path traitvalue:family ],
+        [ sh:datatype xsd:string ;
+            sh:description "The biological sex of the specimen." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 36 ;
+            sh:path traitvalue:sex ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the body mass units were inferred. " ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path traitvalue:body_mass_units_inferred ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path traitvalue:genus ],
+        [ sh:datatype xsd:string ;
+            sh:description "The morphology of a testis." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 40 ;
+            sh:path traitvalue:testicle_description ],
+        [ sh:datatype xsd:float ;
+            sh:description "The latitude where the specimen with the trait was found." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path traitvalue:decimalLatitude ],
+        [ sh:datatype xsd:float ;
+            sh:description "Length of the ear from the notch to the tip." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 21 ;
+            sh:path traitvalue:ear_from_notch ],
         [ sh:datatype xsd:string ;
             sh:description "The country where the specimen with the trait was found." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 11 ;
             sh:path traitvalue:countryCode ],
+        [ sh:datatype xsd:integer ;
+            sh:description "The month that the trait was recorded." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path traitvalue:month ],
+        [ sh:datatype xsd:integer ;
+            sh:description "The number of embryos observed in uterus." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 24 ;
+            sh:path traitvalue:embryo_count ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path traitvalue:scientificName ],
+            sh:order 1 ;
+            sh:path traitvalue:institutionCode ],
         [ sh:datatype xsd:boolean ;
-            sh:description "Specifies if the total length was estimated." ;
+            sh:description "Specifies if the total length recorded is ambiguous." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 46 ;
-            sh:path traitvalue:total_length_estimated ],
-        [ sh:datatype xsd:integer ;
-            sh:description "The day of the month that the trait was recorded." ;
+            sh:order 45 ;
+            sh:path traitvalue:total_length_ambiguous ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the recorded body mass is ambiguous." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path traitvalue:day ],
+            sh:order 19 ;
+            sh:path traitvalue:body_mass_ambiguous ],
+        [ sh:datatype xsd:float ;
+            sh:description "The length of an embryo." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 25 ;
+            sh:path traitvalue:embryo_length ],
+        [ sh:datatype xsd:float ;
+            sh:description "The length of an external ear." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 22 ;
+            sh:path traitvalue:ear_length ],
+        [ sh:datatype xsd:float ;
+            sh:description "The lengh of a hindfoot." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 28 ;
+            sh:path traitvalue:hind_foot_length ],
+        [ sh:datatype xsd:float ;
+            sh:description "The length of the short axis of testis spheroid (perpendicular to long axis at midpoint)." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 43 ;
+            sh:path traitvalue:testicle_width ],
+        [ sh:datatype xsd:float ;
+            sh:description "The length of the long axis of testis spheroid." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 41 ;
+            sh:path traitvalue:testicle_length ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path traitvalue:fieldNotes ],
+        [ sh:datatype xsd:string ;
+            sh:description "Secretion or expression of milk from the mammary glands." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 31 ;
+            sh:path traitvalue:lactation ],
+        [ sh:datatype xsd:string ;
+            sh:description "The morphology of the specimen's nipple(s)." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 33 ;
+            sh:path traitvalue:nipple ],
         [ sh:datatype xsd:string ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 4 ;
             sh:path traitvalue:order ],
         [ sh:datatype xsd:string ;
+            sh:description "The specimen's uterus contains a developing embryo, fetus, or unborn offspring." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path traitvalue:specificEpithet ],
+            sh:order 35 ;
+            sh:path traitvalue:pregnancy ],
+        [ sh:datatype xsd:integer ;
+            sh:description "The year that the trait was recorded." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path traitvalue:year ],
+        [ sh:datatype xsd:string ;
+            sh:description "Identifies the record that contains the trait data values." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path traitvalue:occurrenceID ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 15 ;
+            sh:path traitvalue:dynamicProperties ],
+        [ sh:datatype xsd:float ;
+            sh:description "The length of a forearm." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 27 ;
+            sh:path traitvalue:forearm_length ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 16 ;
+            sh:path traitvalue:occurrenceRemarks ],
+        [ sh:datatype xsd:float ;
+            sh:description "Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 44 ;
+            sh:path traitvalue:total_length ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the hind foot length units were inferred. " ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 29 ;
+            sh:path traitvalue:hind_foot_length_units_inferred ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the ear length units were inferred. " ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 23 ;
+            sh:path traitvalue:ear_length_units_inferred ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the embryo size units were inferred. " ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 26 ;
+            sh:path traitvalue:embryo_size_units_inferred ],
         [ sh:datatype xsd:string ;
             sh:description "The degree of perforation of the female vagina." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 49 ;
-            sh:path traitvalue:vagina ] ;
+            sh:path traitvalue:vagina ],
+        [ sh:datatype xsd:float ;
+            sh:description "A length measurement of a hindfoot that includes the nail." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 30 ;
+            sh:path traitvalue:hind_foot_with_claw ],
+        [ sh:datatype xsd:string ;
+            sh:description "The state where the specimen with the trait was found." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path traitvalue:stateProvince ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the total length units were inferred. " ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 47 ;
+            sh:path traitvalue:total_length_units_inferred ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "Specifies if the tail length was estimated." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 38 ;
+            sh:path traitvalue:tail_length_estimated ],
+        [ sh:datatype xsd:integer ;
+            sh:description "The day of the month that the trait was recorded." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path traitvalue:day ],
+        [ sh:datatype xsd:float ;
+            sh:description "The length of the specimen's tragus." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 48 ;
+            sh:path traitvalue:tragus_length ],
+        [ sh:datatype xsd:float ;
+            sh:description "The length of the specimen's tail." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 37 ;
+            sh:path traitvalue:tail_length ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path traitvalue:specificEpithet ] ;
     sh:targetClass traitvalue:TraitValue .
 
 

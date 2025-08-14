@@ -6,193 +6,343 @@
             "properties": {
                 "body_mass": {
                     "description": "The mass of specimen having the trait.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "body_mass_ambiguous": {
                     "description": "Specifies if the recorded body mass is ambiguous.",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "body_mass_units_inferred": {
                     "description": "Specifies if the body mass units were inferred. ",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "catalogNumber": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "countryCode": {
                     "description": "The country where the specimen with the trait was found.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "day": {
                     "description": "The day of the month that the trait was recorded.",
-                    "type": "integer"
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
                 },
                 "decimalLatitude": {
                     "description": "The latitude where the specimen with the trait was found.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "decimalLongitude": {
                     "description": "The longitude where the specimen with the trait was found.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "dynamicProperties": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "ear_from_notch": {
                     "description": "Length of the ear from the notch to the tip.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "ear_length": {
                     "description": "The length of an external ear.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "ear_length_units_inferred": {
                     "description": "Specifies if the ear length units were inferred. ",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "embryo_count": {
                     "description": "The number of embryos observed in uterus.",
-                    "type": "integer"
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
                 },
                 "embryo_length": {
                     "description": "The length of an embryo.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "embryo_size_units_inferred": {
                     "description": "Specifies if the embryo size units were inferred. ",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "family": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "fieldNotes": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "forearm_length": {
                     "description": "The length of a forearm.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "genus": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "hind_foot_length": {
                     "description": "The lengh of a hindfoot.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "hind_foot_length_units_inferred": {
                     "description": "Specifies if the hind foot length units were inferred. ",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "hind_foot_with_claw": {
                     "description": "A length measurement of a hindfoot that includes the nail.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "institutionCode": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "lactation": {
                     "description": "Secretion or expression of milk from the mammary glands.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "life_stage": {
-                    "description": "The developmental stage of the life cycle of the organism represented.",
-                    "type": "string"
+                    "description": "The age class or life stage of the dwc:Organism(s) at the time the dwc:Occurrence was recorded.",
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "month": {
                     "description": "The month that the trait was recorded.",
-                    "type": "integer"
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
                 },
                 "nipple": {
                     "description": "The morphology of the specimen's nipple(s).",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "nipple_count": {
                     "description": "The number of nipples the specimen has.",
-                    "type": "integer"
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
                 },
                 "occurrenceID": {
                     "description": "Identifies the record that contains the trait data values.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "occurrenceRemarks": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "order": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "pregnancy": {
                     "description": "The specimen's uterus contains a developing embryo, fetus, or unborn offspring.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "scientificName": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "sex": {
                     "description": "The biological sex of the specimen.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "specificEpithet": {
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "stateProvince": {
                     "description": "The state where the specimen with the trait was found.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "tail_length": {
                     "description": "The length of the specimen's tail.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "tail_length_estimated": {
                     "description": "Specifies if the tail length was estimated.",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "tail_length_units_inferred": {
                     "description": "Specifies if the tail length units were inferred. ",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "testicle_description": {
                     "description": "The morphology of a testis.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "testicle_length": {
                     "description": "The length of the long axis of testis spheroid.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "testicle_size_units_inferred": {
                     "description": "Specifies if the testis size units were inferred. ",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "testicle_width": {
                     "description": "The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "total_length": {
                     "description": "Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "total_length_ambiguous": {
                     "description": "Specifies if the total length recorded is ambiguous.",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "total_length_estimated": {
                     "description": "Specifies if the total length was estimated.",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "total_length_units_inferred": {
                     "description": "Specifies if the total length units were inferred. ",
-                    "type": "boolean"
+                    "type": [
+                        "boolean",
+                        "null"
+                    ]
                 },
                 "tragus_length": {
                     "description": "The length of the specimen's tragus.",
-                    "type": "number"
+                    "type": [
+                        "number",
+                        "null"
+                    ]
                 },
                 "vagina": {
                     "description": "The degree of perforation of the female vagina.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "year": {
                     "description": "The year that the trait was recorded.",
-                    "type": "integer"
+                    "type": [
+                        "integer",
+                        "null"
+                    ]
                 }
             },
             "title": "TraitValue",
