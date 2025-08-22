@@ -31,10 +31,11 @@ hind_foot_length,http://purl.obolibrary.org/obo/OBA_1000049
 hind_foot_length_units_inferred,
 hind_foot_with_claw,http://purl.obolibrary.org/obo/FOVT_0000003
 lactation,http://purl.obolibrary.org/obo/UBERON_0001911
-life_stage,http://purl.obolibrary.org/obo/UBERON_0000105
+life_stage,http://rs.tdwg.org/dwc/terms/lifeStage|http://purl.obolibrary.org/obo/UBERON_0000105
+mammary_count,http://purl.obolibrary.org/obo/UBERON_0001911
 nipple,http://purl.obolibrary.org/obo/OBA_VT0006078
 nipple_count,http://purl.obolibrary.org/obo/OBA_VT1000206
-pregnancy,http://purl.obolibrary.org/obo/UBERON_0000995
+pregnancy,http://purl.obolibrary.org/obo/UBERON_0000995|http://purl.obolibrary.org/obo/GO_0007565
 sex,http://purl.obolibrary.org/obo/PATO_0000047
 tail_length,http://purl.obolibrary.org/obo/OBA_VT0002758
 tail_length_estimated,
@@ -47,5 +48,5 @@ total_length,http://purl.obolibrary.org/obo/OBA_VT0001256
 total_length_ambiguous,
 total_length_estimated,
 total_length_units_inferred,
-tragus_length,
+tragus_length,http://purl.obolibrary.org/obo/UBERON_0010887
 vagina,http://purl.obolibrary.org/obo/OBA_VT0001139
