@@ -325,7 +325,7 @@ slots:
     related_mappings:
       - UBERON:0010887 # tragus
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0010887 # tragus
+      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000122 # length
   vagina:
     description: >-
       The degree of perforation of the female vagina.
