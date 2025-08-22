@@ -171,6 +171,9 @@ slots:
       The length of an embryo.
     range: float
     related_mappings:
+      - UBERON:0000922 # embryo
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000122 # length
   embryo_size_units_inferred:
     description: >-
       Specifies if the embryo size units were inferred. 
