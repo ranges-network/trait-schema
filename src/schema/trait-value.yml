@@ -218,12 +218,12 @@ slots:
       - UBERON:0000105 # life cycle stage
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000105 # life cycle stage
-  mammary_count:
-    description: >-
-      The number of mammary glands present in the specimen.
-    range: integer
-    related_mappings:
-      - UBERON:0001911 # mammary gland
+  # mammary_count:
+  #   description: >-
+  #     The number of mammary glands present in the specimen.
+  #   range: integer
+  #   related_mappings:
+  #     - UBERON:0001911 # mammary gland
   nipple:
     description: >-
       The morphology of the specimen's nipple(s).
