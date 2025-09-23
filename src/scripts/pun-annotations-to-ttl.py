@@ -159,7 +159,7 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 @click.command(
         help="""
         Reads the annotations in a LinkML schema and converts punning annotations into OWL.\n
-        e.g., schema-pun-to-ttl.py myschema.yaml
+        e.g., pun-annotations-to-ttl.py myschema.yaml
         """,
         context_settings=CONTEXT_SETTINGS)
 @click.argument ('schema')
