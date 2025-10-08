@@ -164,8 +164,10 @@ slots:
     related_mappings:
       - UBERON:0000995 # uterus
       - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  UBERON:0000995 # uterus
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  UBERON:0000990 # reproductive system
   embryo_length:
     description: >-
       The length of an embryo.
