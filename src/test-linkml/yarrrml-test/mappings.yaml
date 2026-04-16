@@ -1,0 +1,35 @@
+prefixes:
+  ex: http://www.example.com/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  FOVT:  http://purl.obolibrary.org/obo/FOVT_
+  OBA:   http://purl.obolibrary.org/obo/OBA_
+
+mappings:
+  trait:
+    sources:
+      - ['ASUoccurrence-reduced-100.csv~csv']
+    s: ~ # "~"" is a blank node
+    po:
+      - [ex:occurrenceID, $(occurrenceID)]
+      - [ex:body_mass, $(body_mass)]
+      - [ex:tail_length, $(tail_length)]
+      - [ex:total_length, $(total_length)]
+  pun_body_mass:
+    sources:
+      - ['ASUoccurrence-reduced-100.csv~csv']
+    s: ex:body_mass
+    po:
+      - [rdfs:subClassOf, OBA:VT0001259~iri]
+  pun_tail_length:
+    sources:
+      - ['ASUoccurrence-reduced-100.csv~csv']
+    s: ex:tail_length
+    po:
+      - [rdfs:subClassOf, OBA:VT0002758~iri]
+  pun_total_length:
+    sources:
+      - ['ASUoccurrence-reduced-100.csv~csv']
+    s: ex:total_length
+    po:
+      - [rdfs:subClassOf, OBA:VT0001256~iri]

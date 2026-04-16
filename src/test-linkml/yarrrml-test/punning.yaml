@@ -1,0 +1,14 @@
+prefixes:
+  ex: http://www.example.com/
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  FOVT: http://purl.obolibrary.org/obo/FOVT_
+  OBA:  http://purl.obolibrary.org/obo/OBA_
+
+mappings:
+  punning:
+    sources:
+      - ['ASUoccurrence-reduced-100.csv~csv']
+    s: ex:body_mass
+    po:
+      - [rdf:type, OBA:VT0001259~iri]
