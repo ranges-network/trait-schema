@@ -21,15 +21,18 @@ mappings:
     s: ex:body_mass
     po:
       - [rdfs:subClassOf, OBA:VT0001259~iri]
+      - [rdf:type, owl:DatatypeProperty~iri]
   pun_tail_length:
     sources:
       - ['ASUoccurrence-reduced-100.csv~csv']
     s: ex:tail_length
     po:
       - [rdfs:subClassOf, OBA:VT0002758~iri]
+      - [rdf:type, owl:DatatypeProperty~iri]
   pun_total_length:
     sources:
       - ['ASUoccurrence-reduced-100.csv~csv']
     s: ex:total_length
     po:
       - [rdfs:subClassOf, OBA:VT0001256~iri]
+      - [rdf:type, owl:DatatypeProperty~iri]
