@@ -1,0 +1,55 @@
+[PrefixDeclaration]
+:           http://example.org/ASUoccurrence/
+asu:        http://example.org/ASUoccurrence/vocab/
+xsd:        http://www.w3.org/2001/XMLSchema#
+rdf:        http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs:       http://www.w3.org/2000/01/rdf-schema#
+owl:        http://www.w3.org/2002/07/owl#
+
+[MappingDeclaration] @collection [[
+
+mappingId   ASUoccurrence-type
+target      :occurrence/{occurrenceID} a asu:Occurrence .
+source      SELECT occurrenceID FROM ASUoccurrence
+
+mappingId   ASUoccurrence-id
+target      :occurrence/{occurrenceID} asu:occurrenceID {occurrenceID}^^xsd:string .
+source      SELECT occurrenceID FROM ASUoccurrence
+
+mappingId   ASUoccurrence-bodyMass
+target      :occurrence/{occurrenceID} asu:bodyMass {body_mass}^^xsd:decimal .
+source      SELECT occurrenceID, body_mass FROM ASUoccurrence WHERE body_mass IS NOT NULL
+
+mappingId   ASUoccurrence-tailLength
+target      :occurrence/{occurrenceID} asu:tailLength {tail_length}^^xsd:decimal .
+source      SELECT occurrenceID, tail_length FROM ASUoccurrence WHERE tail_length IS NOT NULL
+
+mappingId   ASUoccurrence-totalLength
+target      :occurrence/{occurrenceID} asu:totalLength {total_length}^^xsd:decimal .
+source      SELECT occurrenceID, total_length FROM ASUoccurrence WHERE total_length IS NOT NULL
+
+mappingId   pun-bodyMass-datatypeProperty
+target      asu:bodyMass a owl:DatatypeProperty .
+source      SELECT 1 AS dummy FROM ASUoccurrence LIMIT 1
+
+mappingId   pun-bodyMass-class
+target      asu:bodyMass a owl:Class .
+source      SELECT 1 AS dummy FROM ASUoccurrence LIMIT 1
+
+mappingId   pun-tailLength-datatypeProperty
+target      asu:tailLength a owl:DatatypeProperty .
+source      SELECT 1 AS dummy FROM ASUoccurrence LIMIT 1
+
+mappingId   pun-tailLength-class
+target      asu:tailLength a owl:Class .
+source      SELECT 1 AS dummy FROM ASUoccurrence LIMIT 1
+
+mappingId   pun-totalLength-datatypeProperty
+target      asu:totalLength a owl:DatatypeProperty .
+source      SELECT 1 AS dummy FROM ASUoccurrence LIMIT 1
+
+mappingId   pun-totalLength-class
+target      asu:totalLength a owl:Class .
+source      SELECT 1 AS dummy FROM ASUoccurrence LIMIT 1
+
+]]
