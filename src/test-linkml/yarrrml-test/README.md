@@ -29,3 +29,4 @@ To generate turtle in which the `tail_length` `inheres in` the `specimen`, run t
 <http://www.example.com/specimen_0226a1bc-af02-43fe-b210-d149f2c609d0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0100051> .
 <http://www.example.com/tail_length_0226a1bc-af02-43fe-b210-d149f2c609d0> <http://purl.obolibrary.org/obo/RO_0000052> <http://www.example.com/tail_length_0226a1bc-af02-43fe-b210-d149f2c609d0> .
 <http://www.example.com/tail_length_0226a1bc-af02-43fe-b210-d149f2c609d0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBA_VT0002758> .
+```
