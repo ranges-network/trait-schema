@@ -40,29 +40,52 @@ classes:
       - body_mass
       - body_mass_ambiguous
       - body_mass_units_inferred
+      - calcar_length
+      - crown-rump_length
+      - curvilinear_length
+      - ear_from_crown
       - ear_from_notch
       - ear_length
       - ear_length_units_inferred
       - embryo_count
+      - embryo_count_females
+      - embryo_count_males
+      - embryo_count_left
+      - embryo_count_right
       - embryo_length
       - embryo_size_units_inferred
       - forearm_length
       - hind_foot_length
       - hind_foot_length_units_inferred
       - hind_foot_with_claw
+      - hind_foot_without_claw
       - lactation
       - life_stage
-      - nipple
+      - nipple_state
       - nipple_count
+      - nipple_size
+      - ovary_description
+      - ovary_length
+      - ovary_length_2
+      - ovary_width
+      - ovary_width_2
+      - placental_scar_count
+      - placental_scar_count_left
+      - placental_scar_count_right
+      - placental_scars_present
       - pregnancy
       - sex
       - tail_length
       - tail_length_estimated
       - tail_length_units_inferred
-      - testicle_description
-      - testicle_length
-      - testicle_size_units_inferred
-      - testicle_width
+      - testis_description
+      - testis_length
+      - testis_length_2
+      - testis_size_units_inferred
+      - testis_width
+      - testis_width_2
+      - testis_position
+      - thumb_length
       - total_length
       - total_length_ambiguous
       - total_length_estimated
@@ -139,9 +162,33 @@ slots:
     description: >-
       Specifies if the body mass units were inferred. 
     range: boolean
+  calcar_length:
+    description: >-
+      Length of a spur of cartilage arising from inner side of ankle and running along part of outer interfemoral membrane in bats.
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000000 # calcar length
+  crown-rump_length:
+    description: >-
+      Length from the crown of the head to bottom of the rump of a fetus or embryo, taken in straight line along body axis.
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000009 # embryonic crown-rump length
+  curvilinear_length:
+    description: >-
+      Length from the crown of the head to bottom of the rump of a fetus or embryo, taken along the spinal curvature.
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000008 # embryonic curvilinear length
+  ear_from_crown:
+    description: >-
+      The length of a line of an ear from the dorsal end of the base of the ear to the tip of the pinna.
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000011 # ear length from crown
   ear_from_notch:
     description: >-
-      Length of the ear from the notch to the tip.
+      The length of a line of an ear from a helix of the outer ear to an intertragus insicusure of an ear.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000005 # ear length to notch
@@ -167,7 +214,31 @@ slots:
       - UBERON:0000474 # female reproductive system
       - UBERON:0000990 # reproductive system
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  UBERON:0000990 # reproductive system
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000002 # uterine embryo count
+  embryo_count_females:
+    description: >-
+      The number of embryos that are female. 
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000002 # uterine embryo count
+  embryo_count_males:
+    description: >-
+      The number of embryos that are male.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000002 # uterine embryo count
+  embryo_count_left:
+    description: >-
+      The number of embryos observed in left horn of uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000003 # left uterine embryo count
+  embryo_count_right:
+    description: >-
+      The number of embryos observed in right horn of uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000004 # right uterine embryo count
   embryo_length:
     description: >-
       The length of an embryo.
@@ -208,6 +279,12 @@ slots:
       - FOVT:0000003 # pes length with nail
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000003 # pes length with nail
+  hind_foot_without_claw:
+    description: >-
+      Length of hindfoot from the back of the ankle to the base of the longest claw.
+    range: float
+    related_mappings:
+      - FOVT:0000004 # pes length without nail
   lactation:
     description: >-
       Secretion or expression of milk from the mammary glands.
@@ -229,7 +306,7 @@ slots:
   #   range: integer
   #   related_mappings:
   #     - UBERON:0001911 # mammary gland
-  nipple:
+  nipple state:
     description: >-
       The morphology of the specimen's nipple(s).
     range: string
@@ -241,6 +318,57 @@ slots:
     range: integer
     related_mappings:
       - OBA:VT1000206 # nipple quantity
+  nipple_size:
+    description: >-
+      degree of lactational enlargement of the female nipple
+    range: integer
+    related_mappings:
+      - OBA:0002334 # nipple size
+  ovary_description:
+    description: >-
+    range: string
+  ovary_length:
+    description: >-
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
+  ovary_length_2:
+    description: >-
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
+  ovary_width:
+    description: >-
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
+  ovary_width_2:
+    description: >-
+    range: float
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
+  placental_scar_count:
+    description: >-
+      Number of placental scars observed in uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019 # placental scar count
+  placental_scar_count_left:
+    description: >-
+      Number of placental scars observed in left horn of uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000020 # left placental scar count
+  placental_scar_count_right:
+    description: >-
+      Number of placental scars observed in right horn of uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000021 # right placental scar count
+  placental_scars_present:
+    description: >-
+      Presence of sites of former embryo implantation in uterus, appearing as pigmented areas.
+    range: boolean
   pregnancy:
     description: >-
       The specimen's uterus contains a developing embryo, fetus, or unborn offspring.
@@ -249,7 +377,7 @@ slots:
       - UBERON:0000995 # uterus
       - GO:0007565 # pregnancy
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000995 # uterus
+      pun_as: rdf:type owl:Class; rdfs:subClassOf GO:0007565 # female pregnancy
   sex:
     description: >-
       The biological sex of the specimen.
@@ -272,7 +400,7 @@ slots:
     description: >-
       Specifies if the tail length units were inferred. 
     range: boolean
-  testicle_description:
+  testis_description:
     description: >-
       The morphology of a testis.
     range: string
@@ -280,7 +408,7 @@ slots:
       - OBA:VT0001146 # testes morphology trait
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001146 # testes morphology trait
-  testicle_length:
+  testis_length:
     description: >-
       The length of the long axis of testis spheroid.
     range: float
@@ -288,11 +416,19 @@ slots:
       - FOVT:0001057 # testis length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057 # testis length
-  testicle_size_units_inferred:
+  testis_length_2:
+    description: >-
+      The length of the long axis of testis spheroid.
+    range: float
+    related_mappings:
+      - FOVT:0001057 # testis length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057 # testis length
+  testis_size_units_inferred:
     description: >-
       Specifies if the testis size units were inferred. 
     range: boolean
-  testicle_width:
+  testis_width:
     description: >-
       The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).
     range: float
@@ -300,6 +436,26 @@ slots:
       - FOVT:0001368 # testis width
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368 # testis width
+  testis_width_2:
+    description: >-
+      The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).
+    range: float
+    related_mappings:
+      - FOVT:0001368 # testis width
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368 # testis width
+  testis_position:
+    description: >-
+      Degree of descent of the male gonad.
+    range: string
+  thumb_length:
+    description: >-
+      Length of first digit of forelimb (pollex) from the base to the tip of the longest claw.
+    range: float
+    related_mappings:
+      - OBA_0003003 # manual digit 1 length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA_0003003 # manual digit 1 length
   total_length:
     description: >-
       Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.
