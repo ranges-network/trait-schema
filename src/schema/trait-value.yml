@@ -329,7 +329,7 @@ slots:
   nipple_size:
     description: >-
       degree of lactational enlargement of the female nipple
-    range: float
+    range: string
     related_mappings:
       - OBA:0002334 # nipple size
     annotations:
