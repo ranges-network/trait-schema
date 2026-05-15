@@ -86,6 +86,8 @@ classes:
       - testis_width_2
       - testis_position
       - thumb_length
+      - thumb_length_with_claw
+      - thumb_length_without_claw
       - total_length
       - total_length_ambiguous
       - total_length_estimated
@@ -214,31 +216,31 @@ slots:
       - UBERON:0000474 # female reproductive system
       - UBERON:0000990 # reproductive system
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000002 # uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
   embryo_count_females:
     description: >-
       The number of embryos that are female. 
     range: integer
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000002 # uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000016 # female uterine embryo count
   embryo_count_males:
     description: >-
       The number of embryos that are male.
     range: integer
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000002 # uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000017 # male uterine embryo count
   embryo_count_left:
     description: >-
       The number of embryos observed in left horn of uterus.
     range: integer
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000003 # left uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000003 # left uterine embryo count
   embryo_count_right:
     description: >-
       The number of embryos observed in right horn of uterus.
     range: integer
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT_1000004 # right uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000004 # right uterine embryo count
   embryo_length:
     description: >-
       The length of an embryo.
@@ -246,7 +248,7 @@ slots:
     related_mappings:
       - UBERON:0000922 # embryo
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000122 # length
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000010 # embryonic body length
   embryo_size_units_inferred:
     description: >-
       Specifies if the embryo size units were inferred. 
@@ -291,6 +293,8 @@ slots:
     range: string
     related_mappings:
       - UBERON:0001911 # mammary gland
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf GO:0007595 # lactation
   life_stage:
     description: >-
       The age class or life stage of the dwc:Organism(s) at the time the dwc:Occurrence was recorded.
@@ -306,44 +310,57 @@ slots:
   #   range: integer
   #   related_mappings:
   #     - UBERON:0001911 # mammary gland
-  nipple state:
+  nipple_state:
     description: >-
       The morphology of the specimen's nipple(s).
     range: string
     related_mappings:
       - OBA:VT0006078 # nipple morphology trait
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0006078 # nipple morphology trait
   nipple_count:
     description: >-
       The number of nipples the specimen has.
     range: integer
     related_mappings:
       - OBA:VT1000206 # nipple quantity
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT1000206 # nipple quantity
   nipple_size:
     description: >-
       degree of lactational enlargement of the female nipple
-    range: integer
+    range: float
     related_mappings:
       - OBA:0002334 # nipple size
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:0002334 # nipple size
   ovary_description:
     description: >-
+      Description of the morphology of a ovary.
     range: string
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001126 # ovary morphology trait
   ovary_length:
     description: >-
+      The length of the long axis of ovary.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
   ovary_length_2:
     description: >-
+      The length of the long axis of ovary.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
   ovary_width:
     description: >-
+      The length of the short axis of ovary (perpendicular to long axis at midpoint).
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
   ovary_width_2:
     description: >-
+      The length of the short axis of ovary (perpendicular to long axis at midpoint).
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
@@ -402,7 +419,7 @@ slots:
     range: boolean
   testis_description:
     description: >-
-      The morphology of a testis.
+      Description of the morphology of a testis.
     range: string
     related_mappings:
       - OBA:VT0001146 # testes morphology trait
@@ -448,6 +465,8 @@ slots:
     description: >-
       Degree of descent of the male gonad.
     range: string
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:1000107 # testis position
   thumb_length:
     description: >-
       Length of first digit of forelimb (pollex) from the base to the tip of the longest claw.
@@ -456,6 +475,22 @@ slots:
       - OBA_0003003 # manual digit 1 length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA_0003003 # manual digit 1 length
+  thumb_length_with_claw:
+    description: >-
+      The length of a thumb that includes the nail.
+    range: float
+    related_mappings:
+      - FOVT:1000022 # thumb length with nail
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000022 # thumb length with nail
+  thumb_length_without_claw:
+    description: >-
+      The length of a thumb that excludes the nail.
+    range: float
+    related_mappings:
+      - FOVT:1000023 # thumb length without nail
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000023 # thumb length without nail
   total_length:
     description: >-
       Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.
@@ -483,10 +518,12 @@ slots:
     related_mappings:
       - UBERON:0010887 # tragus
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000122 # length
-  vagina:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000001 # tragus length
+  vaginal perforation:
     description: >-
       The degree of perforation of the female vagina.
     range: string
     related_mappings:
       - OBA:VT0001139
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000012 # vaginal perforation
