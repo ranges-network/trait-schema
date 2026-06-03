@@ -48,11 +48,16 @@ classes:
       - ear_length
       - ear_length_units_inferred
       - embryo_count
+      - embryo_count_1
+      - embryo_count_1_side
+      - embryo_count_2
+      - embryo_count_2_side
       - embryo_count_females
       - embryo_count_males
       - embryo_count_left
       - embryo_count_right
       - embryo_length
+      - embryo_length_measured_from
       - embryo_size_units_inferred
       - forearm_length
       - hind_foot_length
@@ -65,11 +70,15 @@ classes:
       - nipple_count
       - nipple_size
       - ovary_description
-      - ovary_length
+      - ovary_length_1
       - ovary_length_2
-      - ovary_width
+      - ovary_width_2
       - ovary_width_2
       - placental_scar_count
+      - placental_scar_count_1
+      - placental_scar_count_1_side
+      - placental_scar_count_2
+      - placental_scar_count_2_side
       - placental_scar_count_left
       - placental_scar_count_right
       - placental_scars_present
@@ -79,11 +88,15 @@ classes:
       - tail_length_estimated
       - tail_length_units_inferred
       - testis_description
-      - testis_length
+      - testis_length_1
+      - testis_length_1_side
       - testis_length_2
+      - testis_length_2_side
       - testis_size_units_inferred
-      - testis_width
+      - testis_width_1
+      - testis_width_1_side
       - testis_width_2
+      - testis_width_2_side
       - testis_position
       - thumb_length
       - thumb_length_with_claw
@@ -217,6 +230,26 @@ slots:
       - UBERON:0000990 # reproductive system
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
+  embryo_count_1:
+    description: >-
+      The number of embryos observed in one horn of the uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
+  embryo_count_1_side:
+    description: >-
+      The side of the uterus (left or right) in which the embryo count was observed.
+    range: string
+  embryo_count_2:
+    description: >-
+      The number of embryos observed in one horn of the uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
+  embryo_count_2_side:
+    description: >-
+      The side of the uterus (left or right) in which the embryo count was observed.
+    range: string
   embryo_count_females:
     description: >-
       The number of embryos that are female. 
@@ -243,12 +276,16 @@ slots:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000004 # right uterine embryo count
   embryo_length:
     description: >-
-      The length of an embryo.
+      The length of an embryo, taken in a a straight line along the body axis.
     range: float
     related_mappings:
       - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000010 # embryonic body length
+  embryo_length_measured_from:
+    description: >-
+      Positions of embryo from which length was measured (crown of head to rump of fetus).
+    range: string
   embryo_size_units_inferred:
     description: >-
       Specifies if the embryo size units were inferred. 
@@ -336,31 +373,31 @@ slots:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:0002334 # nipple size
   ovary_description:
     description: >-
-      Description of the morphology of a ovary.
+      Description of the condition of the ovary observed.
     range: string
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001126 # ovary morphology trait
-  ovary_length:
+  ovary_length_1:
     description: >-
-      The length of the long axis of ovary.
+      The length of an ovary.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
   ovary_length_2:
     description: >-
-      The length of the long axis of ovary.
+      The length of an ovary.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
-  ovary_width:
+  ovary_width_1:
     description: >-
-      The length of the short axis of ovary (perpendicular to long axis at midpoint).
+      The width of an ovary.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
   ovary_width_2:
     description: >-
-      The length of the short axis of ovary (perpendicular to long axis at midpoint).
+      The width of the short axis of ovary (perpendicular to long axis at midpoint).
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
@@ -370,6 +407,26 @@ slots:
     range: integer
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019 # placental scar count
+  placental_scar_count_1:
+    description: >-
+      Number of placental scars observed in one horn of uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019 # placental scar count
+  placental_scar_count_1_side:
+    description: >-
+      The side of the uterus on which placental scars are observed (left, right).
+    range: string
+  placental_scar_count_2:
+    description: >-
+      Number of placental scars observed in one horn of uterus.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019 # placental scar count
+  placental_scar_count_2_side:
+    description: >-
+      The side of the uterus on which placental scars are observed (left, right).
+    range: string
   placental_scar_count_left:
     description: >-
       Number of placental scars observed in left horn of uterus.
@@ -419,48 +476,64 @@ slots:
     range: boolean
   testis_description:
     description: >-
-      Description of the morphology of a testis.
+      Description of testis observed.
     range: string
     related_mappings:
       - OBA:VT0001146 # testes morphology trait
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001146 # testes morphology trait
-  testis_length:
+  testis_length_1:
     description: >-
-      The length of the long axis of testis spheroid.
+      The length of the long axis of one male gonad or testis spheroid.
     range: float
     related_mappings:
       - FOVT:0001057 # testis length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057 # testis length
+  testis_length_1_side:
+    description: >-
+      The side of location of the gonad or testis spheroid.
+    range: string
   testis_length_2:
     description: >-
-      The length of the long axis of testis spheroid.
+      The length of the long axis of one male gonad ortestis spheroid.
     range: float
     related_mappings:
       - FOVT:0001057 # testis length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057 # testis length
+  testis_length_2_side:
+    description: >-
+      The side of location of the gonad or testis spheroid.
+    range: string
   testis_size_units_inferred:
     description: >-
       Specifies if the testis size units were inferred. 
     range: boolean
-  testis_width:
+  testis_width_1:
     description: >-
-      The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).
+      The width of the short axis of one male gonad or testis spheroid.
     range: float
     related_mappings:
       - FOVT:0001368 # testis width
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368 # testis width
+  testis_width_1_side:
+    description: >-
+      The side of location of the gonad or testis spheroid.
+    range: string
   testis_width_2:
     description: >-
-      The length of the short axis of testis spheroid (perpendicular to long axis at midpoint).
+      The width of the short axis of one male gonad or testis spheroid.
     range: float
     related_mappings:
       - FOVT:0001368 # testis width
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368 # testis width
+  testis_width_2_side:
+    description: >-
+      The side of location of the gonad or testis spheroid.
+    range: string
   testis_position:
     description: >-
       Degree of descent of the male gonad.
