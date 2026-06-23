@@ -324,6 +324,8 @@ slots:
     range: float
     related_mappings:
       - FOVT:0000004 # pes length without nail
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000004 # pes length without nail
   lactation:
     description: >-
       Secretion or expression of milk from the mammary glands.
@@ -458,6 +460,8 @@ slots:
     range: string
     related_mappings:
       - PATO:0000047 # biological sex
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000047 # biological sex
   tail_length:
     description: >-
       The length of the specimen's tail.
@@ -480,8 +484,6 @@ slots:
     range: string
     related_mappings:
       - OBA:VT0001146 # testes morphology trait
-    annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001146 # testes morphology trait
   testis_length_1:
     description: >-
       The length of the long axis of one male gonad or testis spheroid.
