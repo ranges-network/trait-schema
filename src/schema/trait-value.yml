@@ -37,16 +37,20 @@ classes:
       - dynamicProperties
       - occurrenceRemarks
       - fieldNotes
+      - age
+      - age_class
       - body_mass
       - body_mass_ambiguous
       - body_mass_units_inferred
       - calcar_length
+      - colors
       - crown-rump_length
       - curvilinear_length
       - ear_from_crown
       - ear_from_notch
       - ear_length
       - ear_length_units_inferred
+      - ear_length_measured_from
       - embryo_count
       - embryo_count_1
       - embryo_count_1_side
@@ -62,18 +66,27 @@ classes:
       - forearm_length
       - hind_foot_length
       - hind_foot_length_units_inferred
+      - hind_foot_length_includes
       - hind_foot_with_claw
       - hind_foot_without_claw
       - lactation
+      - lactation_description
       - life_stage
-      - nipple_state
+      - molt_condition
+      - nipple_description
       - nipple_count
       - nipple_size
+      - numeric_age
       - ovary_description
       - ovary_length_1
+      - ovary_length_1_side
       - ovary_length_2
+      - ovary_length_2_side
+      - ovary_width_1
+      - ovary_width_1_side
       - ovary_width_2
-      - ovary_width_2
+      - ovary_width_2_side
+      - parity
       - placental_scar_count
       - placental_scar_count_1
       - placental_scar_count_1_side
@@ -83,6 +96,7 @@ classes:
       - placental_scar_count_right
       - placental_scars_present
       - pregnancy
+      - reproductive_data
       - sex
       - tail_length
       - tail_length_estimated
@@ -99,6 +113,7 @@ classes:
       - testis_width_2_side
       - testis_position
       - thumb_length
+      - thumb_length_includes
       - thumb_length_with_claw
       - thumb_length_without_claw
       - total_length
@@ -161,6 +176,19 @@ slots:
     range: string
   fieldNotes:
     range: string
+  age:
+    description: >-
+      A general description of the age. See also age class and numeric age.
+    range: string
+    related_mappings:
+      - PATO:0000011 # age
+      - PATO:0001486 # chronological age
+  age_class:
+    description: >-
+      The age class, reproductive stage, life stage of the biological individual (e.g., juvenile, adult, eft, nymph, etc.).         
+    range: string
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000105 # life cycle stage
   body_mass:
     description: >-
       The mass of specimen having the trait.
@@ -183,6 +211,12 @@ slots:
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000000 # calcar length
+  colors:
+    description: >-
+      A description of colors.
+    range: string
+    related_mappings:
+      - PATO:0000014 # color
   crown-rump_length:
     description: >-
       Length from the crown of the head to bottom of the rump of a fetus or embryo, taken in straight line along body axis.
@@ -219,6 +253,10 @@ slots:
     description: >-
       Specifies if the ear length units were inferred. 
     range: boolean
+  ear_length_measured_from:
+    description: >-
+      The position of the external ear from which the length was measured (typically from either the crown of head or the notch of ear to the tip of ear).
+    range: ear_enum
   embryo_count:
     description: >-
       The number of embryos observed in uterus.
@@ -285,7 +323,7 @@ slots:
   embryo_length_measured_from:
     description: >-
       Positions of embryo from which length was measured (crown of head to rump of fetus).
-    range: string
+    range: embryo_enum
   embryo_size_units_inferred:
     description: >-
       Specifies if the embryo size units were inferred. 
@@ -310,6 +348,10 @@ slots:
     description: >-
       Specifies if the hind foot length units were inferred. 
     range: boolean
+  hind_foot_length_includes:
+    description: >-
+      The part(s) included in the hind_foot_length measurement (typically from the back of the ankle to either the base or tip of the longest claw). 
+    range: hind_foot_enum
   hind_foot_with_claw:
     description: >-
       A length measurement of a hindfoot that includes the nail.
@@ -334,6 +376,12 @@ slots:
       - UBERON:0001911 # mammary gland
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf GO:0007595 # lactation
+  lactation_description:
+    description: >-
+       A description of the secretion or expression of milk from the mammary glands.
+    range: string
+    related_mappings:
+      - GO:0007595 # lactation
   life_stage:
     description: >-
       The age class or life stage of the dwc:Organism(s) at the time the dwc:Occurrence was recorded.
@@ -349,9 +397,17 @@ slots:
   #   range: integer
   #   related_mappings:
   #     - UBERON:0001911 # mammary gland
-  nipple_state:
+  molt_condition:
     description: >-
-      The morphology of the specimen's nipple(s).
+      A description of molt stage or condition.
+    range: string
+    related_mappings:
+      - GO:0044851 # hair cycle phase
+      - GO:0042303 # molting cycle
+      - GO:0022404 # molting cycle process
+  nipple_description:
+    description: >-
+      The state or condition of the nipple(s).  
     range: string
     related_mappings:
       - OBA:VT0006078 # nipple morphology trait
@@ -373,6 +429,14 @@ slots:
       - OBA:0002334 # nipple size
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:0002334 # nipple size
+  numeric_age:
+    description: >-
+      The age of specimen given as a numeric value plus units.
+    range: float
+    related_mappings:
+      - PATO:0001486 # chronological age
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0001486 # chronological age
   ovary_description:
     description: >-
       Description of the condition of the ovary observed.
@@ -385,24 +449,45 @@ slots:
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
+  ovary_length_1_side:
+    description: >-
+      The side of location of the ovary.
+    range: string
   ovary_length_2:
     description: >-
       The length of an ovary.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
+  ovary_length_2_side:
+    description: >-
+      The side of location of the ovary.
+    range: string
   ovary_width_1:
     description: >-
       The width of an ovary.
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
+  ovary_width_1_side:
+    description: >-
+      The side of location of the ovary.
   ovary_width_2:
     description: >-
       The width of the short axis of ovary (perpendicular to long axis at midpoint).
     range: float
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
+  ovary_width_2_side:
+    description: >-
+      The side of location of the ovary.
+    range: string
+  parity:
+    description: >-
+      The number of times that a viviparous organism has given birth.
+    range: integer
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0002370 # parity
   placental_scar_count:
     description: >-
       Number of placental scars observed in uterus.
@@ -454,6 +539,12 @@ slots:
       - GO:0007565 # pregnancy
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf GO:0007565 # female pregnancy
+  reproductive_data:
+    description: >-
+      A general description of reproductive data.
+    range: string
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000005 # reproductive data item
   sex:
     description: >-
       The biological sex of the specimen.
@@ -550,6 +641,10 @@ slots:
       - OBA_0003003 # manual digit 1 length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA_0003003 # manual digit 1 length
+  thumb_length_includes:
+    description: >-
+       The part(s) included in the thumb_length measurement (typically from the base of the thumb to either the base of the thumb claw or the tip of the thumb claw).
+    range: thumb_enum
   thumb_length_with_claw:
     description: >-
       The length of a thumb that includes the nail.
@@ -602,3 +697,40 @@ slots:
       - OBA:VT0001139
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000012 # vaginal perforation
+
+enums:
+  ear_enum:
+    description: >-
+      An enumeration for body-parts ear lengths are measured from.
+    permissible_values:
+      "crown":
+        description:
+        meaning:
+      "notch":
+        description:
+        meaning:
+
+  embryo_enum:
+    description: >-
+      An enumeration for body-parts embryo lengths are measured from.
+    permissible_values:
+      "crown":
+        description:
+        meaning:
+
+  hind_foot_enum:
+    description: >-
+      An enumeration for body-parts hind foot lengths are measured from.
+    permissible_values:
+      "claw":
+        description:
+        meaning: 
+
+  thumb_enum:
+    description: >-
+      An enumeration for body-parts thumb lengths are measured from.
+    permissible_values:
+      "claw":
+        description:
+        meaning:
+  
