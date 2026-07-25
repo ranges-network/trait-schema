@@ -432,7 +432,7 @@ slots:
   numeric_age:
     description: >-
       The age of specimen given as a numeric value plus units.
-    range: float
+    range: string
     related_mappings:
       - PATO:0001486 # chronological age
     annotations:
@@ -704,33 +704,32 @@ enums:
       An enumeration for body-parts ear lengths are measured from.
     permissible_values:
       "crown":
-        description:
-        meaning:
+        description: The part of the ear that projects from the head, connecting to the external acoustic meatus.
+        meaning: http://purl.obolibrary.org/obo/UBERON_0001757 # pinna
       "notch":
-        description:
-        meaning:
+        description: A surface structure that is the narrowed downward continuation of the conchal space bounded anteriorly by the borders of the tragus, posteriorly by theantitragus, and along its lower lateral margins and inferior boundary by the connection between the first two.
+        meaning: http://purl.obolibrary.org/obo/UBERON_0036212 # intertragic incisure
 
   embryo_enum:
     description: >-
       An enumeration for body-parts embryo lengths are measured from.
     permissible_values:
       "crown":
-        description:
-        meaning:
+        description: The top of the head.
+        meaning: http://purl.obolibrary.org/obo/UBERON_1000019 # top of head
 
   hind_foot_enum:
     description: >-
       An enumeration for body-parts hind foot lengths are measured from.
     permissible_values:
       "claw":
-        description:
-        meaning: 
+        description: A horn-like keratin structure covering the dorsal aspect of the terminal phalanges of fingers and toes.
+        meaning: http://purl.obolibrary.org/obo/UBERON_0001705 # nail
 
   thumb_enum:
     description: >-
       An enumeration for body-parts thumb lengths are measured from.
     permissible_values:
       "claw":
-        description:
-        meaning:
-  
+        description: A horn-like keratin structure covering the dorsal aspect of the terminal phalanges of fingers and toes.
+        meaning: http://purl.obolibrary.org/obo/UBERON_0001705 # nail
