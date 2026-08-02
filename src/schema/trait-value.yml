@@ -187,6 +187,8 @@ slots:
     description: >-
       The age class, reproductive stage, life stage of the biological individual (e.g., juvenile, adult, eft, nymph, etc.).         
     range: string
+    related_mappings:
+      - UBERON:0000105 # life cycle stage
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000105 # life cycle stage
   body_mass:
@@ -201,14 +203,21 @@ slots:
     description: >-
       Specifies if the recorded body mass is ambiguous.
     range: boolean
+    related_mappings:
+      - OBA:VT0001259 # body mass
   body_mass_units_inferred:
     description: >-
       Specifies if the body mass units were inferred. 
     range: boolean
+    related_mappings:
+      - OBA:VT0001259 # body mass
   calcar_length:
     description: >-
       Length of a spur of cartilage arising from inner side of ankle and running along part of outer interfemoral membrane in bats.
     range: float
+    related_mappings:
+      - FOVT:1000000 # calcar length
+      - UBERON:0010869 # calcar
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000000 # calcar length
   colors:
@@ -221,24 +230,38 @@ slots:
     description: >-
       Length from the crown of the head to bottom of the rump of a fetus or embryo, taken in straight line along body axis.
     range: float
+    related_mappings:
+      - FOVT:1000009 # embryonic crown-rump length
+      - OBA:VT0001256 # body length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000009 # embryonic crown-rump length
   curvilinear_length:
     description: >-
       Length from the crown of the head to bottom of the rump of a fetus or embryo, taken along the spinal curvature.
     range: float
+    related_mappings:
+      - FOVT:1000008 # embryonic curvilinear length
+      - OBA:VT0001256 # body length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000008 # embryonic curvilinear length
   ear_from_crown:
     description: >-
       The length of a line of an ear from the dorsal end of the base of the ear to the tip of the pinna.
     range: float
+    related_mappings:
+      - FOVT:0000011 # ear length from crown
+      - UBERON:0001690 # ear
+      - OBA:0003426 # external ear length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000011 # ear length from crown
   ear_from_notch:
     description: >-
       The length of a line of an ear from a helix of the outer ear to an intertragus insicusure of an ear.
     range: float
+    related_mappings:
+      - FOVT:0000005 # ear length to notch
+      - UBERON:0001690 # ear
+      - OBA:0003426 # external ear length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000005 # ear length to notch
   ear_length:
@@ -247,16 +270,29 @@ slots:
     range: float
     related_mappings:
       - OBA:0003426 # external ear length
+      - FOVT:0000005 # ear length to notch
+      - FOVT:0000011 # ear length from crown
+      - UBERON:0001690 # ear
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:0003426 # external ear length
   ear_length_units_inferred:
     description: >-
       Specifies if the ear length units were inferred. 
     range: boolean
+    related_mappings:
+      - OBA:0003426 # external ear length
+      - FOVT:0000005 # ear length to notch
+      - FOVT:0000011 # ear length from crown
+      - UBERON:0001690 # ear
   ear_length_measured_from:
     description: >-
       The position of the external ear from which the length was measured (typically from either the crown of head or the notch of ear to the tip of ear).
     range: ear_enum
+    related_mappings:
+      - OBA:0003426 # external ear length
+      - FOVT:0000005 # ear length to notch
+      - FOVT:0000011 # ear length from crown
+      - UBERON:0001690 # ear
   embryo_count:
     description: >-
       The number of embryos observed in uterus.
@@ -266,50 +302,99 @@ slots:
       - UBERON:0009098 # gravid uterus
       - UBERON:0000474 # female reproductive system
       - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
   embryo_count_1:
     description: >-
       The number of embryos observed in one horn of the uterus.
     range: integer
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
   embryo_count_1_side:
     description: >-
       The side of the uterus (left or right) in which the embryo count was observed.
     range: string
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
   embryo_count_2:
     description: >-
       The number of embryos observed in one horn of the uterus.
     range: integer
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
   embryo_count_2_side:
     description: >-
       The side of the uterus (left or right) in which the embryo count was observed.
     range: string
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
   embryo_count_females:
     description: >-
       The number of embryos that are female. 
     range: integer
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000016 # female uterine embryo count
   embryo_count_males:
     description: >-
       The number of embryos that are male.
     range: integer
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000017 # male uterine embryo count
   embryo_count_left:
     description: >-
       The number of embryos observed in left horn of uterus.
     range: integer
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000003 # left uterine embryo count
   embryo_count_right:
     description: >-
       The number of embryos observed in right horn of uterus.
     range: integer
+    related_mappings:
+      - UBERON:0000995 # uterus
+      - UBERON:0009098 # gravid uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - UBERON:0000922 # embryo
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000004 # right uterine embryo count
   embryo_length:
@@ -318,16 +403,29 @@ slots:
     range: float
     related_mappings:
       - UBERON:0000922 # embryo
+      - FOVT:1000010 # embryonic body length
+      - FOVT:1000008 # embryonic curvilinear length
+      - FOVT:1000009 # embryonic crown-rump length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000010 # embryonic body length
   embryo_length_measured_from:
     description: >-
       Positions of embryo from which length was measured (crown of head to rump of fetus).
     range: embryo_enum
+    related_mappings:
+      - UBERON:0000922 # embryo
+      - FOVT:1000010 # embryonic body length
+      - FOVT:1000008 # embryonic curvilinear length
+      - FOVT:1000009 # embryonic crown-rump length
   embryo_size_units_inferred:
     description: >-
       Specifies if the embryo size units were inferred. 
     range: boolean
+    related_mappings:
+      - UBERON:0000922 # embryo
+      - FOVT:1000010 # embryonic body length
+      - FOVT:1000008 # embryonic curvilinear length
+      - FOVT:1000009 # embryonic crown-rump length
   forearm_length:
     description: >-
       The length of a forearm.
@@ -342,22 +440,31 @@ slots:
     range: float
     related_mappings:
       - OBA:1000049 # pes length
+      - UBERON:0002387 # pes
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:1000049 # pes length
   hind_foot_length_units_inferred:
     description: >-
       Specifies if the hind foot length units were inferred. 
     range: boolean
+    related_mappings:
+      - OBA:1000049 # pes length
+      - UBERON:0002387 # pes
   hind_foot_length_includes:
     description: >-
       The part(s) included in the hind_foot_length measurement (typically from the back of the ankle to either the base or tip of the longest claw). 
     range: hind_foot_enum
+    related_mappings:
+      - OBA:1000049 # pes length
+      - UBERON:0002387 # pes
   hind_foot_with_claw:
     description: >-
       A length measurement of a hindfoot that includes the nail.
     range: float
     related_mappings:
       - FOVT:0000003 # pes length with nail
+      - OBA:1000049 # pes length
+      - UBERON:0002387 # pes
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000003 # pes length with nail
   hind_foot_without_claw:
@@ -366,6 +473,8 @@ slots:
     range: float
     related_mappings:
       - FOVT:0000004 # pes length without nail
+      - OBA:1000049 # pes length
+      - UBERON:0002387 # pes
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0000004 # pes length without nail
   lactation:
@@ -374,6 +483,7 @@ slots:
     range: string
     related_mappings:
       - UBERON:0001911 # mammary gland
+      - GO:0007595 # lactation
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf GO:0007595 # lactation
   lactation_description:
@@ -381,6 +491,7 @@ slots:
        A description of the secretion or expression of milk from the mammary glands.
     range: string
     related_mappings:
+      - UBERON:0001911 # mammary gland
       - GO:0007595 # lactation
   life_stage:
     description: >-
@@ -389,6 +500,8 @@ slots:
     related_mappings:
       - dwc:lifeStage
       - UBERON:0000105 # life cycle stage
+      - PATO:0000011 # age
+      - PATO:0001486 # chronological age
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000105 # life cycle stage
   # mammary_count:
@@ -410,7 +523,13 @@ slots:
       The state or condition of the nipple(s).  
     range: string
     related_mappings:
+      - UBERON:0001911 # mammary gland
       - OBA:VT0006078 # nipple morphology trait
+      - OBA:0002334 # nipple size
+      - OBA:VT0100028 # nipple diameter
+      - OBA:VT1000205 # nipple length
+      - OBA:0002336 # nipple position
+      - OBA:VT1000206 # nipple quantity
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0006078 # nipple morphology trait
   nipple_count:
@@ -427,6 +546,9 @@ slots:
     range: string
     related_mappings:
       - OBA:0002334 # nipple size
+      - OBA:VT0006078 # nipple morphology trait
+      - OBA:VT0100028 # nipple diameter
+      - OBA:VT1000205 # nipple length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:0002334 # nipple size
   numeric_age:
@@ -435,114 +557,218 @@ slots:
     range: string
     related_mappings:
       - PATO:0001486 # chronological age
+      - PATO:0000011 # age
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0001486 # chronological age
   ovary_description:
     description: >-
       Description of the condition of the ovary observed.
     range: string
+    related_mappings:
+      - OBA:VT0001126 # ovary morphology trait
+      - UBERON:0000995 # uterus
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000990 # reproductive system
+      - FOVT:0001062 # ovary length
+      - FOVT:0001371 # ovary width
+      - UBERON:0000992 # ovary
+      - OBA:VT0010375 # ovary diameter
+      - OBA:VT1000641 # ovary mass
+      - OBA:1000545 # ovary quality
+      - OBA:VT0001127 # ovary size trait
+      - FOVT:0001064 # left ovary length
+      - FOVT:0001063 # right ovary length
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001126 # ovary morphology trait
   ovary_length_1:
     description: >-
       The length of an ovary.
     range: float
+    related_mappings:
+      - FOVT:0001062 # ovary length
+      - UBERON:0000992 # ovary
+      - FOVT:0001064 # left ovary length
+      - FOVT:0001063 # right ovary length
+      - OBA:VT0001126 # ovary morphology trait
+      - OBA:VT0001127 # ovary size trait
+      - OBA:1000545 # ovary quality
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
   ovary_length_1_side:
     description: >-
       The side of location of the ovary.
     range: string
+    related_mappings:
+      - UBERON:0000992 # ovary
+      - OBA:VT0001126 # ovary morphology trait
+      - FOVT:0001062 # ovary length
+      - FOVT:0001064 # left ovary length
+      - FOVT:0001063 # right ovary length
   ovary_length_2:
     description: >-
       The length of an ovary.
     range: float
+    related_mappings:
+      - FOVT:0001062 # ovary length
+      - UBERON:0000992 # ovary
+      - FOVT:0001064 # left ovary length
+      - FOVT:0001063 # right ovary length
+      - OBA:VT0001126 # ovary morphology trait
+      - OBA:VT0001127 # ovary size trait
+      - OBA:1000545 # ovary quality
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062 # ovary length
   ovary_length_2_side:
     description: >-
       The side of location of the ovary.
     range: string
+    related_mappings:
+      - UBERON:0000992 # ovary
+      - OBA:VT0001126 # ovary morphology trait
+      - FOVT:0001062 # ovary length
+      - FOVT:0001064 # left ovary length
+      - FOVT:0001063 # right ovary length
   ovary_width_1:
     description: >-
       The width of an ovary.
     range: float
+    related_mappings:
+      - FOVT:0001371 # ovary width
+      - UBERON:0000992 # ovary
+      - OBA:VT0001126 # ovary morphology trait
+      - OBA:VT0001127 # ovary size trait
+      - OBA:1000545 # ovary quality
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
   ovary_width_1_side:
     description: >-
       The side of location of the ovary.
+    range: string
+    related_mappings:
+      - UBERON:0000992 # ovary
+      - OBA:VT0001126 # ovary morphology trait
+      - FOVT:0001371 # ovary width
   ovary_width_2:
     description: >-
       The width of the short axis of ovary (perpendicular to long axis at midpoint).
     range: float
+    related_mappings:
+      - FOVT:0001371 # ovary width
+      - UBERON:0000992 # ovary
+      - OBA:VT0001126 # ovary morphology trait
+      - OBA:VT0001127 # ovary size trait
+      - OBA:1000545 # ovary quality
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371 # ovary width
   ovary_width_2_side:
     description: >-
       The side of location of the ovary.
     range: string
+    related_mappings:
+      - UBERON:0000992 # ovary
+      - OBA:VT0001126 # ovary morphology trait
+      - FOVT:0001371 # ovary width
   parity:
     description: >-
       The number of times that a viviparous organism has given birth.
     range: integer
+    related_mappings:
+      - PATO:0002370 # parity
+      - GO:0007565 # female pregnancy
+      - OBI:0002394 # number of pregnancies
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0002370 # parity
   placental_scar_count:
     description: >-
       Number of placental scars observed in uterus.
     range: integer
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019 # placental scar count
   placental_scar_count_1:
     description: >-
       Number of placental scars observed in one horn of uterus.
     range: integer
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019 # placental scar count
   placental_scar_count_1_side:
     description: >-
       The side of the uterus on which placental scars are observed (left, right).
     range: string
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
   placental_scar_count_2:
     description: >-
       Number of placental scars observed in one horn of uterus.
     range: integer
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019 # placental scar count
   placental_scar_count_2_side:
     description: >-
       The side of the uterus on which placental scars are observed (left, right).
     range: string
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
   placental_scar_count_left:
     description: >-
       Number of placental scars observed in left horn of uterus.
     range: integer
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000020 # left placental scar count
   placental_scar_count_right:
     description: >-
       Number of placental scars observed in right horn of uterus.
     range: integer
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000021 # right placental scar count
   placental_scars_present:
     description: >-
       Presence of sites of former embryo implantation in uterus, appearing as pigmented areas.
     range: boolean
+    related_mappings:
+      - FOVT:1000019 # placental scar count
+      - FOVT:1000018 # placental scar
+      - UBERON:0000995 # uterus
   pregnancy:
     description: >-
       The specimen's uterus contains a developing embryo, fetus, or unborn offspring.
     range: string
     related_mappings:
       - UBERON:0000995 # uterus
-      - GO:0007565 # pregnancy
+      - GO:0007565 # female pregnancy
+      - OBI:0002394 # number of pregnancies
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf GO:0007565 # female pregnancy
   reproductive_data:
     description: >-
       A general description of reproductive data.
     range: string
+    related_mappings:
+      - FOVT:1000005 # reproductive data item
+      - UBERON:0000990 # reproductive system
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000005 # reproductive data item
   sex:
@@ -551,6 +777,7 @@ slots:
     range: string
     related_mappings:
       - PATO:0000047 # biological sex
+      - UBERON:0000990 # reproductive system
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000047 # biological sex
   tail_length:
@@ -559,84 +786,153 @@ slots:
     range: float
     related_mappings:
       - OBA:VT0002758 # tail length
+      - UBERON:0002415 # tail
+      - OBA:VT0003456 # tail size trait
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0002758 # tail length
   tail_length_estimated:
     description: >-
       Specifies if the tail length was estimated.
     range: boolean
+    related_mappings:
+      - OBA:VT0002758 # tail length
+      - UBERON:0002415 # tail
+      - OBA:VT0003456 # tail size trait
   tail_length_units_inferred:
     description: >-
       Specifies if the tail length units were inferred. 
     range: boolean
+    related_mappings:
+      - OBA:VT0002758 # tail length
+      - UBERON:0002415 # tail
+      - OBA:VT0003456 # tail size trait
   testis_description:
     description: >-
       Description of testis observed.
     range: string
     related_mappings:
       - OBA:VT0001146 # testes morphology trait
+      - UBERON:0000079 # male reproductive system
+      - UBERON:0000473 # testis
+      - FOVT:0001057 # testis length
+      - FOVT:0001368 # testis width
+      - OBA:0004147 # testis amount
+      - OBA:1000107 # testis position
+      - FOVT:0001059 # left testis length
+      - FOVT:0001058 # right testis length
+      - FOVT:1000006 # left testis width
+      - FOVT:1000007 # right testis width
   testis_length_1:
     description: >-
       The length of the long axis of one male gonad or testis spheroid.
     range: float
     related_mappings:
       - FOVT:0001057 # testis length
+      - UBERON:0000473 # testis
+      - FOVT:0001059 # left testis length
+      - FOVT:0001058 # right testis length
+      - OBA:VT0001146 # testes morphology trait
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057 # testis length
   testis_length_1_side:
     description: >-
       The side of location of the gonad or testis spheroid.
     range: string
+    related_mappings:
+      - UBERON:0000473 # testis
+      - OBA:VT0001146 # testes morphology trait
+      - OBA:1000107 # testis position
+      - FOVT:0001057 # testis length
   testis_length_2:
     description: >-
       The length of the long axis of one male gonad ortestis spheroid.
     range: float
     related_mappings:
       - FOVT:0001057 # testis length
+      - UBERON:0000473 # testis
+      - FOVT:0001059 # left testis length
+      - FOVT:0001058 # right testis length
+      - OBA:VT0001146 # testes morphology trait
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057 # testis length
   testis_length_2_side:
     description: >-
       The side of location of the gonad or testis spheroid.
     range: string
+    related_mappings:
+      - UBERON:0000473 # testis
+      - OBA:VT0001146 # testes morphology trait
+      - OBA:1000107 # testis position
+      - FOVT:0001057 # testis length
   testis_size_units_inferred:
     description: >-
       Specifies if the testis size units were inferred. 
     range: boolean
+    related_mappings:
+      - FOVT:0001057 # testis length
+      - FOVT:0001368 # testis width
+      - UBERON:0000473 # testis
+      - OBA:VT0001146 # testes morphology trait
   testis_width_1:
     description: >-
       The width of the short axis of one male gonad or testis spheroid.
     range: float
     related_mappings:
       - FOVT:0001368 # testis width
+      - UBERON:0000473 # testis
+      - OBA:VT0001146 # testes morphology trait
+      - FOVT:1000006 # left testis width
+      - FOVT:1000007 # right testis width
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368 # testis width
   testis_width_1_side:
     description: >-
       The side of location of the gonad or testis spheroid.
     range: string
+    related_mappings:
+      - UBERON:0000473 # testis
+      - OBA:VT0001146 # testes morphology trait
+      - OBA:1000107 # testis position
+      - FOVT:0001368 # testis width
   testis_width_2:
     description: >-
       The width of the short axis of one male gonad or testis spheroid.
     range: float
     related_mappings:
       - FOVT:0001368 # testis width
+      - UBERON:0000473 # testis
+      - OBA:VT0001146 # testes morphology trait
+      - FOVT:1000006 # left testis width
+      - FOVT:1000007 # right testis width
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368 # testis width
   testis_width_2_side:
     description: >-
       The side of location of the gonad or testis spheroid.
     range: string
+    related_mappings:
+      - UBERON:0000473 # testis
+      - OBA:VT0001146 # testes morphology trait
+      - OBA:1000107 # testis position
+      - FOVT:0001368 # testis width
   testis_position:
     description: >-
       Degree of descent of the male gonad.
     range: string
+    related_mappings:
+      - OBA:1000107 # testis position
+      - UBERON:0000473 # testis
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:1000107 # testis position
   thumb_length:
     description: >-
       Length of first digit of forelimb (pollex) from the base to the tip of the longest claw.
     range: float
+    related_mappings:
+      - OBA:VT0003003 # manual digit 1 length
+      - UBERON:0001463 # manual digit 1
+      - FOVT:1000022 # thumb length with nail
+      - FOVT:1000023 # thumb length without nail
     related_mappings:
       - OBA_0003003 # manual digit 1 length
     annotations:
@@ -645,12 +941,19 @@ slots:
     description: >-
        The part(s) included in the thumb_length measurement (typically from the base of the thumb to either the base of the thumb claw or the tip of the thumb claw).
     range: thumb_enum
+    related_mappings:
+      - OBA:VT0003003 # manual digit 1 length
+      - UBERON:0001463 # manual digit 1
+      - FOVT:1000022 # thumb length with nail
+      - FOVT:1000023 # thumb length without nail
   thumb_length_with_claw:
     description: >-
       The length of a thumb that includes the nail.
     range: float
     related_mappings:
       - FOVT:1000022 # thumb length with nail
+      - OBA:VT0003003 # manual digit 1 length
+      - UBERON:0001463 # manual digit 1
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000022 # thumb length with nail
   thumb_length_without_claw:
@@ -659,12 +962,21 @@ slots:
     range: float
     related_mappings:
       - FOVT:1000023 # thumb length without nail
+      - OBA:VT0003003 # manual digit 1 length
+      - UBERON:0001463 # manual digit 1
+    related_mappings:
+      - FOVT:1000023 # thumb length without nail
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000023 # thumb length without nail
   total_length:
     description: >-
       Total length of the specimen. Fish:Total length (TL) is the length of a fish measured from the tip of the snout to tip of the longest lobe of caudal fin. Measurement done with caudal fin lobes compressed and measured at midline.
     range: float
+    related_mappings:
+      - OBA:VT0001256 # body length
+      - FOVT:1000010 # embryonic body length
+      - FOVT:1000008 # embryonic curvilinear length
+      - FOVT:1000009 # embryonic crown-rump length
     related_mappings: 
       - OBA:VT0001256 # body length
     annotations:
@@ -673,20 +985,37 @@ slots:
     description: >-
       Specifies if the total length recorded is ambiguous.
     range: boolean
+    related_mappings:
+      - OBA:VT0001256 # body length
+      - FOVT:1000010 # embryonic body length
+      - FOVT:1000008 # embryonic curvilinear length
+      - FOVT:1000009 # embryonic crown-rump length
   total_length_estimated:
     description: >-
       Specifies if the total length was estimated.
     range: boolean
+    related_mappings:
+      - OBA:VT0001256 # body length
+      - FOVT:1000010 # embryonic body length
+      - FOVT:1000008 # embryonic curvilinear length
+      - FOVT:1000009 # embryonic crown-rump length
   total_length_units_inferred:
     description: >-
       Specifies if the total length units were inferred. 
     range: boolean
+    related_mappings:
+      - OBA:VT0001256 # body length
+      - FOVT:1000010 # embryonic body length
+      - FOVT:1000008 # embryonic curvilinear length
+      - FOVT:1000009 # embryonic crown-rump length
   tragus_length:
     description: >-
       The length of the specimen's tragus.
     range: float
     related_mappings:
       - UBERON:0010887 # tragus
+      - FOVT:1000001 # tragus length
+      - OBA:0003232 # tragus size
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000001 # tragus length
   vaginal_perforation:
@@ -694,7 +1023,11 @@ slots:
       The degree of perforation of the female vagina.
     range: string
     related_mappings:
-      - OBA:VT0001139
+      - OBA:VT0001139 # vagina morphology trait
+      - FOVT:1000012 # vaginal perforation
+      - UBERON:0000474 # female reproductive system
+      - UBERON:0000996 # vagina
+      - OBA:VT0003531 # vagina development trait
     annotations:
       pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000012 # vaginal perforation
 
@@ -704,8 +1037,8 @@ enums:
       An enumeration for body-parts ear lengths are measured from.
     permissible_values:
       "crown":
-        description: The part of the ear that projects from the head, connecting to the external acoustic meatus.
-        meaning: http://purl.obolibrary.org/obo/UBERON_0001757 # pinna
+        description: The top of the head.
+        meaning: http://purl.obolibrary.org/obo/UBERON_1000019 # top of head
       "notch":
         description: A surface structure that is the narrowed downward continuation of the conchal space bounded anteriorly by the borders of the tragus, posteriorly by theantitragus, and along its lower lateral margins and inferior boundary by the connection between the first two.
         meaning: http://purl.obolibrary.org/obo/UBERON_0036212 # intertragic incisure
