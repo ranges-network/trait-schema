@@ -1032,10 +1032,10 @@ enums:
     description: >-
       An enumeration for body-parts ear lengths are measured from.
     permissible_values:
-      "crown":
+      crown:
         description: Upper portion of the skull that excludes the mandible (when present in the organism), specifically the point where the cranium meets the ear toward the top of the skull.
         meaning: http://purl.obolibrary.org/obo/UBERON_0003128 # cranium
-      "notch":
+      notch:
         description: A surface structure that is the narrowed downward continuation of the conchal space bounded anteriorly by the borders of the tragus, posteriorly by theantitragus, and along its lower lateral margins and inferior boundary by the connection between the first two.
         meaning: http://purl.obolibrary.org/obo/UBERON_0036212 # intertragic incisure
 
@@ -1043,7 +1043,7 @@ enums:
     description: >-
       An enumeration for body-parts embryo lengths are measured from.
     permissible_values:
-      "crown":
+      crown:
         description: The top of the head.
         meaning: http://purl.obolibrary.org/obo/UBERON_1000019 # top of head
 
@@ -1051,7 +1051,7 @@ enums:
     description: >-
       An enumeration for body-parts hind foot lengths are measured from.
     permissible_values:
-      "claw":
+      claw:
         description: A horn-like keratin structure covering the dorsal aspect of the terminal phalanges of fingers and toes.
         meaning: http://purl.obolibrary.org/obo/UBERON_0001705 # nail
 
@@ -1059,6 +1059,6 @@ enums:
     description: >-
       An enumeration for body-parts thumb lengths are measured from.
     permissible_values:
-      "claw":
+      claw:
         description: A horn-like keratin structure covering the dorsal aspect of the terminal phalanges of fingers and toes.
         meaning: http://purl.obolibrary.org/obo/UBERON_0001705 # nail
