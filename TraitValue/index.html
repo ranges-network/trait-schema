@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://ranges-network.org/trait-schema/TraitValue/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Class: TraitValue - Trait Schema</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../css/fontawesome.min.css" rel="stylesheet"/>
+<link href="../css/brands.min.css" rel="stylesheet"/>
+<link href="../css/solid.min.css" rel="stylesheet"/>
+<link href="../css/v4-font-face.min.css" rel="stylesheet"/>
+<link href="../css/base.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" id="hljs-light" rel="stylesheet"/>
+<link disabled="" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" id="hljs-dark" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand" href="..">Trait Schema</a>
+<!-- Expander button -->
+<button aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar-collapse" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<!-- Expanded navigation -->
+<div class="navbar-collapse collapse" id="navbar-collapse">
+<ul class="nav navbar-nav ms-md-auto">
+<li class="nav-item">
+<a class="nav-link" data-bs-target="#mkdocs_search_modal" data-bs-toggle="modal" href="#">
+<i class="fa fa-search"></i> Search
+                            </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://github.com/ranges-network/trait-schema/edit/master/docs/TraitValue.md"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+<div class="navbar-header">
+<button class="navbar-toggler collapsed" data-bs-target="#toc-collapse" data-bs-toggle="collapse" title="Table of Contents" type="button">
+<span class="fa fa-angle-down"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse card bg-body-tertiary" id="toc-collapse">
+<ul class="nav flex-column">
+<li class="nav-item" data-bs-level="1"><a class="nav-link" href="#class-traitvalue">Class: TraitValue</a>
+<ul class="nav flex-column">
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+<div class="col-md-9" role="main">
+<h1 id="class-traitvalue">Class: TraitValue</h1>
+<div data-search-exclude="" markdown="1">
+
+
+
+URI: [traitvalue:TraitValue](http://purl.obolibrary.org/obo/FOVT/data#TraitValue)
+
+
+
+
+
+
+<div class="mermaid"> classDiagram
+    class TraitValue
+    click TraitValue href "../TraitValue/"
+      TraitValue : age
+
+      TraitValue : age_class
+
+      TraitValue : body_mass
+
+      TraitValue : calcar_length
+
+      TraitValue : catalogNumber
+
+      TraitValue : colors
+
+      TraitValue : countryCode
+
+      TraitValue : day
+
+      TraitValue : decimalLatitude
+
+      TraitValue : decimalLongitude
+
+      TraitValue : dynamicProperties
+
+      TraitValue : ear_length
+
+      TraitValue : ear_length_measured_from
+
+
+
+
+
+        TraitValue --&gt; "0..1" EarEnum : ear_length_measured_from
+        click EarEnum href "../EarEnum/"
+
+
+
+      TraitValue : embryo_count
+
+      TraitValue : embryo_count_1
+
+      TraitValue : embryo_count_1_side
+
+      TraitValue : embryo_count_2
+
+      TraitValue : embryo_count_2_side
+
+      TraitValue : embryo_count_females
+
+      TraitValue : embryo_count_males
+
+      TraitValue : embryo_length
+
+      TraitValue : embryo_length_measured_from
+
+
+
+
+
+        TraitValue --&gt; "0..1" EmbryoEnum : embryo_length_measured_from
+        click EmbryoEnum href "../EmbryoEnum/"
+
+
+
+      TraitValue : family
+
+      TraitValue : fieldNotes
+
+      TraitValue : forearm_length
+
+      TraitValue : genus
+
+      TraitValue : hind_foot_length
+
+      TraitValue : hind_foot_length_includes
+
+
+
+
+
+        TraitValue --&gt; "0..1" HindFootEnum : hind_foot_length_includes
+        click HindFootEnum href "../HindFootEnum/"
+
+
+
+      TraitValue : institutionCode
+
+      TraitValue : lactation
+
+      TraitValue : lactation_description
+
+      TraitValue : life_stage
+
+      TraitValue : molt_condition
+
+      TraitValue : month
+
+      TraitValue : nipple_count
+
+      TraitValue : nipple_description
+
+      TraitValue : nipple_size
+
+      TraitValue : numeric_age
+
+      TraitValue : occurrenceID
+
+      TraitValue : occurrenceRemarks
+
+      TraitValue : order
+
+      TraitValue : ovary_description
+
+      TraitValue : ovary_length_1
+
+      TraitValue : ovary_length_1_side
+
+      TraitValue : ovary_length_2
+
+      TraitValue : ovary_length_2_side
+
+      TraitValue : ovary_width_1
+
+      TraitValue : ovary_width_1_side
+
+      TraitValue : ovary_width_2
+
+      TraitValue : ovary_width_2_side
+
+      TraitValue : parity
+
+      TraitValue : placental_scar_count
+
+      TraitValue : placental_scar_count_1
+
+      TraitValue : placental_scar_count_1_side
+
+      TraitValue : placental_scar_count_2
+
+      TraitValue : placental_scar_count_2_side
+
+      TraitValue : placental_scars_present
+
+      TraitValue : pregnancy
+
+      TraitValue : reproductive_data
+
+      TraitValue : scientificName
+
+      TraitValue : sex
+
+      TraitValue : specificEpithet
+
+      TraitValue : stateProvince
+
+      TraitValue : tail_length
+
+      TraitValue : testis_description
+
+      TraitValue : testis_length_1
+
+      TraitValue : testis_length_1_side
+
+      TraitValue : testis_length_2
+
+      TraitValue : testis_length_2_side
+
+      TraitValue : testis_position
+
+      TraitValue : testis_width_1
+
+      TraitValue : testis_width_1_side
+
+      TraitValue : testis_width_2
+
+      TraitValue : testis_width_2_side
+
+      TraitValue : thumb_length
+
+      TraitValue : thumb_length_includes
+
+
+
+
+
+        TraitValue --&gt; "0..1" ThumbEnum : thumb_length_includes
+        click ThumbEnum href "../ThumbEnum/"
+
+
+
+      TraitValue : total_length
+
+      TraitValue : tragus_length
+
+      TraitValue : vagina_state
+
+      TraitValue : year
+
+
+</div>
+<!-- no inheritance hierarchy -->
+
+## Slots
+
+| Name | Cardinality and Range | Description | Inheritance |
+| ---  | --- | --- | --- |
+| [occurrenceID](occurrenceID.md) | 0..1 <br/> [String](String.md) | Identifies the record that contains the trait data values | direct |
+| [institutionCode](institutionCode.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [catalogNumber](catalogNumber.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [scientificName](scientificName.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [order](order.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [family](family.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [genus](genus.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [specificEpithet](specificEpithet.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [day](day.md) | 0..1 <br/> [Integer](Integer.md) | The day of the month that the trait was recorded | direct |
+| [month](month.md) | 0..1 <br/> [Integer](Integer.md) | The month that the trait was recorded | direct |
+| [year](year.md) | 0..1 <br/> [Integer](Integer.md) | The year that the trait was recorded | direct |
+| [countryCode](countryCode.md) | 0..1 <br/> [String](String.md) | The country where the specimen with the trait was found | direct |
+| [stateProvince](stateProvince.md) | 0..1 <br/> [String](String.md) | The state where the specimen with the trait was found | direct |
+| [decimalLatitude](decimalLatitude.md) | 0..1 <br/> [Float](Float.md) | The latitude where the specimen with the trait was found | direct |
+| [decimalLongitude](decimalLongitude.md) | 0..1 <br/> [Float](Float.md) | The longitude where the specimen with the trait was found | direct |
+| [dynamicProperties](dynamicProperties.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [occurrenceRemarks](occurrenceRemarks.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [fieldNotes](fieldNotes.md) | 0..1 <br/> [String](String.md) |  | direct |
+| [age](age.md) | 0..1 <br/> [String](String.md) | A general description of the age | direct |
+| [age_class](age_class.md) | 0..1 <br/> [String](String.md) | The age class, reproductive stage, life stage of the biological individual (e | direct |
+| [body_mass](body_mass.md) | 0..1 <br/> [Float](Float.md) | The mass of the body | direct |
+| [calcar_length](calcar_length.md) | 0..1 <br/> [Float](Float.md) | Length of a spur of cartilage arising from inner side of ankle and running al... | direct |
+| [colors](colors.md) | 0..1 <br/> [String](String.md) | A description of colors | direct |
+| [ear_length](ear_length.md) | 0..1 <br/> [Float](Float.md) | The length of the external ear | direct |
+| [ear_length_measured_from](ear_length_measured_from.md) | 0..1 <br/> [EarEnum](EarEnum.md) | The position of the external ear from which the length was measured (typicall... | direct |
+| [embryo_count](embryo_count.md) | 0..1 <br/> [Integer](Integer.md) | The number of embryos observed in uterus | direct |
+| [embryo_count_1](embryo_count_1.md) | 0..1 <br/> [Integer](Integer.md) | The number of embryos observed in one horn of uterus | direct |
+| [embryo_count_1_side](embryo_count_1_side.md) | 0..1 <br/> [String](String.md) | The side of the uterus where embryo(s) were observed | direct |
+| [embryo_count_2](embryo_count_2.md) | 0..1 <br/> [Integer](Integer.md) | The number of embryos observed in one horn of uterus | direct |
+| [embryo_count_2_side](embryo_count_2_side.md) | 0..1 <br/> [String](String.md) | The side of the uterus where embryo(s) were observed | direct |
+| [embryo_count_females](embryo_count_females.md) | 0..1 <br/> [Integer](Integer.md) | The number of embryos that are female | direct |
+| [embryo_count_males](embryo_count_males.md) | 0..1 <br/> [Integer](Integer.md) | The number of embryos that are male | direct |
+| [embryo_length](embryo_length.md) | 0..1 <br/> [Float](Float.md) | The length of the embryo | direct |
+| [embryo_length_measured_from](embryo_length_measured_from.md) | 0..1 <br/> [EmbryoEnum](EmbryoEnum.md) | Positions of embryos from which the length was measured (crown of head to rum... | direct |
+| [forearm_length](forearm_length.md) | 0..1 <br/> [Float](Float.md) | The length of forelimb from the elbow and the wrist | direct |
+| [hind_foot_length](hind_foot_length.md) | 0..1 <br/> [Float](Float.md) | The length of hindfoot | direct |
+| [hind_foot_length_includes](hind_foot_length_includes.md) | 0..1 <br/> [HindFootEnum](HindFootEnum.md) | The part(s) included in the hind_foot_length measurement (typically from the ... | direct |
+| [lactation](lactation.md) | 0..1 <br/> [String](String.md) | Secreting or expressing milk from the mammary gland(s) | direct |
+| [lactation_description](lactation_description.md) | 0..1 <br/> [String](String.md) | A description of the secretion or expression of milk from the mammary glands | direct |
+| [life_stage](life_stage.md) | 0..1 <br/> [String](String.md) | The developmental stage of the life cycle of the organism represented | direct |
+| [molt_condition](molt_condition.md) | 0..1 <br/> [String](String.md) | A description of molt stage or condition | direct |
+| [nipple_description](nipple_description.md) | 0..1 <br/> [String](String.md) | The state or condition of the nipple(s) | direct |
+| [nipple_count](nipple_count.md) | 0..1 <br/> [Integer](Integer.md) | The number of nipples observed | direct |
+| [nipple_size](nipple_size.md) | 0..1 <br/> [String](String.md) | The degree of lactational enlargement of the female nipple(s) | direct |
+| [numeric_age](numeric_age.md) | 0..1 <br/> [String](String.md) | The age of specimen given as a numeric value plus units | direct |
+| [ovary_description](ovary_description.md) | 0..1 <br/> [String](String.md) | The state or condition of the ovary(ies) | direct |
+| [ovary_length_1](ovary_length_1.md) | 0..1 <br/> [Float](Float.md) | The length of an ovary | direct |
+| [ovary_length_1_side](ovary_length_1_side.md) | 0..1 <br/> [String](String.md) | The side of location of the ovary | direct |
+| [ovary_length_2](ovary_length_2.md) | 0..1 <br/> [Float](Float.md) | The length of an ovary | direct |
+| [ovary_length_2_side](ovary_length_2_side.md) | 0..1 <br/> [String](String.md) | The side of location of the ovary | direct |
+| [ovary_width_1](ovary_width_1.md) | 0..1 <br/> [Float](Float.md) | The width of an ovary | direct |
+| [ovary_width_1_side](ovary_width_1_side.md) | 0..1 <br/> [String](String.md) | The side of location of the ovary | direct |
+| [ovary_width_2](ovary_width_2.md) | 0..1 <br/> [Float](Float.md) | The width of an ovary | direct |
+| [ovary_width_2_side](ovary_width_2_side.md) | 0..1 <br/> [String](String.md) | The side of location of the ovary | direct |
+| [parity](parity.md) | 0..1 <br/> [Integer](Integer.md) | The number of times that a viviparous organism has given birth | direct |
+| [placental_scar_count](placental_scar_count.md) | 0..1 <br/> [Integer](Integer.md) | Number of placental scars observed in uterus | direct |
+| [placental_scar_count_1](placental_scar_count_1.md) | 0..1 <br/> [Integer](Integer.md) | Number of placental scars observed in one horn of the uterus | direct |
+| [placental_scar_count_1_side](placental_scar_count_1_side.md) | 0..1 <br/> [String](String.md) | The side of the placenta on which placental scars are observed | direct |
+| [placental_scar_count_2](placental_scar_count_2.md) | 0..1 <br/> [Integer](Integer.md) | Number of placental scars observed in one horn of theuterus | direct |
+| [placental_scar_count_2_side](placental_scar_count_2_side.md) | 0..1 <br/> [String](String.md) | The side of the placenta on which placental scars are observed | direct |
+| [placental_scars_present](placental_scars_present.md) | 0..1 <br/> [Boolean](Boolean.md) | A description of the presence of sites of former embryo implantation in the u... | direct |
+| [pregnancy](pregnancy.md) | 0..1 <br/> [String](String.md) | Contains a developing embryo, fetus, or unborn offspring | direct |
+| [reproductive_data](reproductive_data.md) | 0..1 <br/> [String](String.md) | A general description of reproductive data | direct |
+| [sex](sex.md) | 0..1 <br/> [String](String.md) | The sex of the organism | direct |
+| [tail_length](tail_length.md) | 0..1 <br/> [Float](Float.md) | The length of tail vertebrae | direct |
+| [testis_description](testis_description.md) | 0..1 <br/> [String](String.md) | The state or condition of the testes | direct |
+| [testis_length_1](testis_length_1.md) | 0..1 <br/> [Float](Float.md) | The length of the long axis of one male gonad spheroid | direct |
+| [testis_length_1_side](testis_length_1_side.md) | 0..1 <br/> [String](String.md) | The side of location of the gonad spheroid | direct |
+| [testis_length_2](testis_length_2.md) | 0..1 <br/> [Float](Float.md) | The length of the long axis of one male gonad spheroid | direct |
+| [testis_length_2_side](testis_length_2_side.md) | 0..1 <br/> [String](String.md) | The side of location of the gonad spheroid | direct |
+| [testis_width_1](testis_width_1.md) | 0..1 <br/> [Float](Float.md) | The width of the short axis of one male gonad spheroid | direct |
+| [testis_width_1_side](testis_width_1_side.md) | 0..1 <br/> [String](String.md) | The side of location of the gonad spheroid | direct |
+| [testis_width_2](testis_width_2.md) | 0..1 <br/> [Float](Float.md) | The width of the short axis of one male gonad spheroid | direct |
+| [testis_width_2_side](testis_width_2_side.md) | 0..1 <br/> [String](String.md) | The side of location of the gonad spheroid | direct |
+| [testis_position](testis_position.md) | 0..1 <br/> [String](String.md) | Degree of descent of the male gonad(s) | direct |
+| [thumb_length](thumb_length.md) | 0..1 <br/> [Float](Float.md) | The length of first digit of forelimb (pollex) | direct |
+| [thumb_length_includes](thumb_length_includes.md) | 0..1 <br/> [ThumbEnum](ThumbEnum.md) | The part(s) included in the thumb_length measurement (typically from the base... | direct |
+| [total_length](total_length.md) | 0..1 <br/> [Float](Float.md) | The anterior-posterior length of the body from the tip of the snout to the en... | direct |
+| [tragus_length](tragus_length.md) | 0..1 <br/> [Float](Float.md) | The length of a pointed eminence of the external ear, situated in front of th... | direct |
+| [vagina_state](vagina_state.md) | 0..1 <br/> [String](String.md) | The state or condition of the vagina | direct |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Identifier and Mapping Information
+
+
+
+
+
+### Schema Source
+
+
+* from schema: https://w3id.org/FOVT/linkml/traitvalue
+
+
+
+
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | traitvalue:TraitValue |
+| native | traitvalue:TraitValue |
+
+
+
+
+
+
+## LinkML Source
+
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+
+### Direct
+
+<details>
+<pre><code class="language-yaml">name: TraitValue
+from_schema: https://w3id.org/FOVT/linkml/traitvalue
+slots:
+- occurrenceID
+- institutionCode
+- catalogNumber
+- scientificName
+- order
+- family
+- genus
+- specificEpithet
+- day
+- month
+- year
+- countryCode
+- stateProvince
+- decimalLatitude
+- decimalLongitude
+- dynamicProperties
+- occurrenceRemarks
+- fieldNotes
+- age
+- age_class
+- body_mass
+- calcar_length
+- colors
+- ear_length
+- ear_length_measured_from
+- embryo_count
+- embryo_count_1
+- embryo_count_1_side
+- embryo_count_2
+- embryo_count_2_side
+- embryo_count_females
+- embryo_count_males
+- embryo_length
+- embryo_length_measured_from
+- forearm_length
+- hind_foot_length
+- hind_foot_length_includes
+- lactation
+- lactation_description
+- life_stage
+- molt_condition
+- nipple_description
+- nipple_count
+- nipple_size
+- numeric_age
+- ovary_description
+- ovary_length_1
+- ovary_length_1_side
+- ovary_length_2
+- ovary_length_2_side
+- ovary_width_1
+- ovary_width_1_side
+- ovary_width_2
+- ovary_width_2_side
+- parity
+- placental_scar_count
+- placental_scar_count_1
+- placental_scar_count_1_side
+- placental_scar_count_2
+- placental_scar_count_2_side
+- placental_scars_present
+- pregnancy
+- reproductive_data
+- sex
+- tail_length
+- testis_description
+- testis_length_1
+- testis_length_1_side
+- testis_length_2
+- testis_length_2_side
+- testis_width_1
+- testis_width_1_side
+- testis_width_2
+- testis_width_2_side
+- testis_position
+- thumb_length
+- thumb_length_includes
+- total_length
+- tragus_length
+- vagina_state
+
+</code></pre>
+</details>
+
+### Induced
+
+<details>
+<pre><code class="language-yaml">name: TraitValue
+from_schema: https://w3id.org/FOVT/linkml/traitvalue
+attributes:
+  occurrenceID:
+    name: occurrenceID
+    description: Identifies the record that contains the trait data values.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  institutionCode:
+    name: institutionCode
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  catalogNumber:
+    name: catalogNumber
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  scientificName:
+    name: scientificName
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  order:
+    name: order
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  family:
+    name: family
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  genus:
+    name: genus
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  specificEpithet:
+    name: specificEpithet
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  day:
+    name: day
+    description: The day of the month that the trait was recorded.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  month:
+    name: month
+    description: The month that the trait was recorded.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  year:
+    name: year
+    description: The year that the trait was recorded.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  countryCode:
+    name: countryCode
+    description: The country where the specimen with the trait was found.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  stateProvince:
+    name: stateProvince
+    description: The state where the specimen with the trait was found.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  decimalLatitude:
+    name: decimalLatitude
+    description: The latitude where the specimen with the trait was found.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  decimalLongitude:
+    name: decimalLongitude
+    description: The longitude where the specimen with the trait was found.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  dynamicProperties:
+    name: dynamicProperties
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  occurrenceRemarks:
+    name: occurrenceRemarks
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  fieldNotes:
+    name: fieldNotes
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  age:
+    name: age
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf PATO:0000011
+    description: A general description of the age.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - PATO:0000011
+    - PATO:0001486
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  age_class:
+    name: age_class
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000105
+    description: 'The age class, reproductive stage, life stage of the biological
+      individual (e.g., juvenile, adult, eft, nymph, etc.).         '
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000105
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  body_mass:
+    name: body_mass
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001259
+    description: The mass of the body.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0001259
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  calcar_length:
+    name: calcar_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000000
+    description: Length of a spur of cartilage arising from inner side of ankle and
+      running along part of outer interfemoral membrane in bats.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000000
+    - UBERON:0010869
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  colors:
+    name: colors
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf PATO:0000014
+    description: A description of colors.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - PATO:0000014
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  ear_length:
+    name: ear_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:0003426
+    description: The length of the external ear.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:0003426
+    - FOVT:0000005
+    - FOVT:0000011
+    - UBERON:0001690
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  ear_length_measured_from:
+    name: ear_length_measured_from
+    description: The position of the external ear from which the length was measured
+      (typically from either the crown of head or the notch of ear to the tip of ear).
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:0003426
+    - FOVT:0000005
+    - FOVT:0000011
+    - UBERON:0001690
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: ear_enum
+  embryo_count:
+    name: embryo_count
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000002
+    description: The number of embryos observed in uterus.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - UBERON:0009098
+    - UBERON:0000474
+    - UBERON:0000990
+    - UBERON:0000922
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  embryo_count_1:
+    name: embryo_count_1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000002
+    description: The number of embryos observed in one horn of uterus.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - UBERON:0009098
+    - UBERON:0000474
+    - UBERON:0000990
+    - UBERON:0000922
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  embryo_count_1_side:
+    name: embryo_count_1_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0002247
+    description: The side of the uterus where embryo(s) were observed.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - UBERON:0009098
+    - UBERON:0000474
+    - UBERON:0000990
+    - UBERON:0000922
+    - UBERON:0002247
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  embryo_count_2:
+    name: embryo_count_2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000002
+    description: The number of embryos observed in one horn of uterus.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - UBERON:0009098
+    - UBERON:0000474
+    - UBERON:0000990
+    - UBERON:0000922
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  embryo_count_2_side:
+    name: embryo_count_2_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0002247
+    description: The side of the uterus where embryo(s) were observed.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - UBERON:0009098
+    - UBERON:0000474
+    - UBERON:0000990
+    - UBERON:0000922
+    - UBERON:0002247
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  embryo_count_females:
+    name: embryo_count_females
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000016
+    description: 'The number of embryos that are female. '
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - UBERON:0009098
+    - UBERON:0000474
+    - UBERON:0000990
+    - UBERON:0000922
+    - FOVT:1000016
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  embryo_count_males:
+    name: embryo_count_males
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000017
+    description: The number of embryos that are male.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - UBERON:0009098
+    - UBERON:0000474
+    - UBERON:0000990
+    - UBERON:0000922
+    - FOVT:1000017
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  embryo_length:
+    name: embryo_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000010
+    description: The length of the embryo.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000922
+    - FOVT:1000010
+    - FOVT:1000008
+    - FOVT:1000009
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  embryo_length_measured_from:
+    name: embryo_length_measured_from
+    description: Positions of embryos from which the length was measured (crown of
+      head to rump).
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000922
+    - FOVT:1000010
+    - FOVT:1000008
+    - FOVT:1000009
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: embryo_enum
+  forearm_length:
+    name: forearm_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001379
+    description: The length of forelimb from the elbow and the wrist.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001379
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  hind_foot_length:
+    name: hind_foot_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:1000049
+    description: The length of hindfoot.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:1000049
+    - UBERON:0002387
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  hind_foot_length_includes:
+    name: hind_foot_length_includes
+    description: 'The part(s) included in the hind_foot_length measurement (typically
+      from the back of the ankle to either the base or tip of the longest claw). '
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:1000049
+    - UBERON:0002387
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: hind_foot_enum
+  lactation:
+    name: lactation
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf GO:0007595
+    description: Secreting or expressing milk from the mammary gland(s).
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0001911
+    - GO:0007595
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  lactation_description:
+    name: lactation_description
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001882
+    description: A description of the secretion or expression of milk from the mammary
+      glands.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0001911
+    - GO:0007595
+    - OBA:VT0001882
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  life_stage:
+    name: life_stage
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000105
+    description: The developmental stage of the life cycle of the organism represented.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - dwc:lifeStage
+    - UBERON:0000105
+    - PATO:0000011
+    - PATO:0001486
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  molt_condition:
+    name: molt_condition
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0000427
+    description: A description of molt stage or condition.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - GO:0044851
+    - GO:0042303
+    - GO:0022404
+    - OBA:VT0000427
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  nipple_description:
+    name: nipple_description
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0006078
+    description: 'The state or condition of the nipple(s).  '
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0001911
+    - OBA:VT0006078
+    - OBA:0002334
+    - OBA:VT0100028
+    - OBA:VT1000205
+    - OBA:0002336
+    - OBA:VT1000206
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  nipple_count:
+    name: nipple_count
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT1000206
+    description: The number of nipples observed.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT1000206
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  nipple_size:
+    name: nipple_size
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:0002334
+    description: The degree of lactational enlargement of the female nipple(s).
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:0002334
+    - OBA:VT0006078
+    - OBA:VT0100028
+    - OBA:VT1000205
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  numeric_age:
+    name: numeric_age
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf PATO:0001486
+    description: The age of specimen given as a numeric value plus units.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - PATO:0001486
+    - PATO:0000011
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  ovary_description:
+    name: ovary_description
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001126
+    description: The state or condition of the ovary(ies).
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0001126
+    - UBERON:0000995
+    - UBERON:0000474
+    - UBERON:0000990
+    - FOVT:0001062
+    - FOVT:0001371
+    - UBERON:0000992
+    - OBA:VT0010375
+    - OBA:VT1000641
+    - OBA:1000545
+    - OBA:VT0001127
+    - FOVT:0001064
+    - FOVT:0001063
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  ovary_length_1:
+    name: ovary_length_1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062
+    description: The length of an ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001062
+    - UBERON:0000992
+    - FOVT:0001064
+    - FOVT:0001063
+    - OBA:VT0001126
+    - OBA:VT0001127
+    - OBA:1000545
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  ovary_length_1_side:
+    name: ovary_length_1_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992
+    description: The side of location of the ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000992
+    - OBA:VT0001126
+    - FOVT:0001062
+    - FOVT:0001064
+    - FOVT:0001063
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  ovary_length_2:
+    name: ovary_length_2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001062
+    description: The length of an ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001062
+    - UBERON:0000992
+    - FOVT:0001064
+    - FOVT:0001063
+    - OBA:VT0001126
+    - OBA:VT0001127
+    - OBA:1000545
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  ovary_length_2_side:
+    name: ovary_length_2_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992
+    description: The side of location of the ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000992
+    - OBA:VT0001126
+    - FOVT:0001062
+    - FOVT:0001064
+    - FOVT:0001063
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  ovary_width_1:
+    name: ovary_width_1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371
+    description: The width of an ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001371
+    - UBERON:0000992
+    - OBA:VT0001126
+    - OBA:VT0001127
+    - OBA:1000545
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  ovary_width_1_side:
+    name: ovary_width_1_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992
+    description: The side of location of the ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000992
+    - OBA:VT0001126
+    - FOVT:0001371
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  ovary_width_2:
+    name: ovary_width_2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001371
+    description: The width of an ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001371
+    - UBERON:0000992
+    - OBA:VT0001126
+    - OBA:VT0001127
+    - OBA:1000545
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  ovary_width_2_side:
+    name: ovary_width_2_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992
+    description: The side of location of the ovary.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000992
+    - OBA:VT0001126
+    - FOVT:0001371
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  parity:
+    name: parity
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf PATO:0002370
+    description: The number of times that a viviparous organism has given birth.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - PATO:0002370
+    - GO:0007565
+    - OBI:0002394
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  placental_scar_count:
+    name: placental_scar_count
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019
+    description: Number of placental scars observed in uterus.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000019
+    - FOVT:1000018
+    - UBERON:0000995
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  placental_scar_count_1:
+    name: placental_scar_count_1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019
+    description: Number of placental scars observed in one horn of the uterus.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000019
+    - FOVT:1000018
+    - UBERON:0000995
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  placental_scar_count_1_side:
+    name: placental_scar_count_1_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000024
+    description: The side of the placenta on which placental scars are observed.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000019
+    - FOVT:1000018
+    - UBERON:0000995
+    - FOVT:1000024
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  placental_scar_count_2:
+    name: placental_scar_count_2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000019
+    description: Number of placental scars observed in one horn of theuterus.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000019
+    - FOVT:1000018
+    - UBERON:0000995
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: integer
+  placental_scar_count_2_side:
+    name: placental_scar_count_2_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000024
+    description: The side of the placenta on which placental scars are observed.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000019
+    - FOVT:1000018
+    - UBERON:0000995
+    - FOVT:1000024
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  placental_scars_present:
+    name: placental_scars_present
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001711
+    description: A description of the presence of sites of former embryo implantation
+      in the uterus, appearing as pigmented areas.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000019
+    - FOVT:1000018
+    - UBERON:0000995
+    - OBA:VT0001711
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: boolean
+  pregnancy:
+    name: pregnancy
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf GO:0007565
+    description: Contains a developing embryo, fetus, or unborn offspring.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000995
+    - GO:0007565
+    - OBI:0002394
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  reproductive_data:
+    name: reproductive_data
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000005
+    description: A general description of reproductive data.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:1000005
+    - UBERON:0000990
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  sex:
+    name: sex
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf PATO:0000047
+    description: The sex of the organism.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - PATO:0000047
+    - UBERON:0000990
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  tail_length:
+    name: tail_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0002758
+    description: The length of tail vertebrae.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0002758
+    - UBERON:0002415
+    - OBA:VT0003456
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  testis_description:
+    name: testis_description
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001146
+    description: The state or condition of the testes.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0001146
+    - UBERON:0000079
+    - UBERON:0000473
+    - FOVT:0001057
+    - FOVT:0001368
+    - OBA:0004147
+    - OBA:1000107
+    - FOVT:0001059
+    - FOVT:0001058
+    - FOVT:1000006
+    - FOVT:1000007
+    - OBA:VT0001146
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  testis_length_1:
+    name: testis_length_1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057
+    description: The length of the long axis of one male gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001057
+    - UBERON:0000473
+    - FOVT:0001059
+    - FOVT:0001058
+    - OBA:VT0001146
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  testis_length_1_side:
+    name: testis_length_1_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473
+    description: The side of location of the gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000473
+    - OBA:VT0001146
+    - OBA:1000107
+    - FOVT:0001057
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  testis_length_2:
+    name: testis_length_2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001057
+    description: The length of the long axis of one male gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001057
+    - UBERON:0000473
+    - FOVT:0001059
+    - FOVT:0001058
+    - OBA:VT0001146
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  testis_length_2_side:
+    name: testis_length_2_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473
+    description: The side of location of the gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000473
+    - OBA:VT0001146
+    - OBA:1000107
+    - FOVT:0001057
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  testis_width_1:
+    name: testis_width_1
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368
+    description: The width of the short axis of one male gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001368
+    - UBERON:0000473
+    - OBA:VT0001146
+    - FOVT:1000006
+    - FOVT:1000007
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  testis_width_1_side:
+    name: testis_width_1_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473
+    description: The side of location of the gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000473
+    - OBA:VT0001146
+    - OBA:1000107
+    - FOVT:0001368
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  testis_width_2:
+    name: testis_width_2
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:0001368
+    description: The width of the short axis of one male gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - FOVT:0001368
+    - UBERON:0000473
+    - OBA:VT0001146
+    - FOVT:1000006
+    - FOVT:1000007
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  testis_width_2_side:
+    name: testis_width_2_side
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473
+    description: The side of location of the gonad spheroid.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0000473
+    - OBA:VT0001146
+    - OBA:1000107
+    - FOVT:0001368
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  testis_position:
+    name: testis_position
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:1000107
+    description: Degree of descent of the male gonad(s).
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:1000107
+    - UBERON:0000473
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+  thumb_length:
+    name: thumb_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA_0003003
+    description: 'The length of first digit of forelimb (pollex). '
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0003003
+    - UBERON:0001463
+    - FOVT:1000022
+    - FOVT:1000023
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  thumb_length_includes:
+    name: thumb_length_includes
+    description: The part(s) included in the thumb_length measurement (typically from
+      the base of the thumb to either the base of the thumb claw or the tip of the
+      thumb claw).
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0003003
+    - UBERON:0001463
+    - FOVT:1000022
+    - FOVT:1000023
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: thumb_enum
+  total_length:
+    name: total_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001256
+    description: The anterior-posterior length of the body from the tip of the snout
+      to the end of the tail vertebrae.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0001256
+    - FOVT:1000010
+    - FOVT:1000008
+    - FOVT:1000009
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  tragus_length:
+    name: tragus_length
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf FOVT:1000001
+    description: The length of a pointed eminence of the external ear, situated in
+      front of the concha, and projecting backward over the meatus.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - UBERON:0010887
+    - FOVT:1000001
+    - OBA:0003232
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: float
+  vagina_state:
+    name: vagina_state
+    annotations:
+      pun_as:
+        tag: pun_as
+        value: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001139
+    description: The state or condition of the vagina.
+    from_schema: https://w3id.org/FOVT/linkml/traitvalue
+    related_mappings:
+    - OBA:VT0001139
+    - FOVT:1000012
+    - UBERON:0000474
+    - UBERON:0000996
+    - OBA:VT0003531
+    rank: 1000
+    owner: TraitValue
+    domain_of:
+    - TraitValue
+    range: string
+
+</code></pre>
+</details></div></div>
+</div>
+</div>
+<footer class="col-md-12">
+<hr/>
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+</footer>
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+<script src="../js/base.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
+<script src="../search/main.js"></script>
+<div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal" id="mkdocs_search_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="searchModalLabel">Search</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p>From here you can search these documents. Enter your search terms below.</p>
+<form>
+<div class="form-group">
+<input class="form-control" id="mkdocs-search-query" placeholder="Search..." title="Type search term here" type="search"/>
+</div>
+</form>
+<div data-no-results-text="No results found" id="mkdocs-search-results"></div>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div><div aria-hidden="true" aria-labelledby="keyboardModalLabel" class="modal" id="mkdocs_keyboard_modal" role="dialog" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<table class="table">
+<thead>
+<tr>
+<th style="width: 20%;">Keys</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="help shortcut"><kbd>?</kbd></td>
+<td>Open this help</td>
+</tr>
+<tr>
+<td class="next shortcut"><kbd>n</kbd></td>
+<td>Next page</td>
+</tr>
+<tr>
+<td class="prev shortcut"><kbd>p</kbd></td>
+<td>Previous page</td>
+</tr>
+<tr>
+<td class="search shortcut"><kbd>s</kbd></td>
+<td>Search</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="modal-footer">
+</div>
+</div>
+</div>
+</div>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
