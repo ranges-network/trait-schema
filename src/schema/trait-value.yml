@@ -183,6 +183,8 @@ slots:
     related_mappings:
       - PATO:0000011 # age
       - PATO:0001486 # chronological age
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000011 # age
   age_class:
     description: >-
       The age class, reproductive stage, life stage of the biological individual (e.g., juvenile, adult, eft, nymph, etc.).         
@@ -226,6 +228,8 @@ slots:
     range: string
     related_mappings:
       - PATO:0000014 # color
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf PATO:0000014 # color
 #  crown-rump_length:
 #    description: >-
 #      Length from the crown of the head to bottom of the rump of a fetus or embryo, taken in straight line along body axis.
@@ -304,7 +308,7 @@ slots:
       - UBERON:0000990 # reproductive system
       - UBERON:0000922 # embryo
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000002 # uterine embryo count
   embryo_count_1:
     description: >-
       The number of embryos observed in one horn of uterus.
@@ -316,7 +320,7 @@ slots:
       - UBERON:0000990 # reproductive system
       - UBERON:0000922 # embryo
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000002 # uterine embryo count
   embryo_count_1_side:
     description: >-
       The side of the uterus where embryo(s) were observed.
@@ -327,6 +331,9 @@ slots:
       - UBERON:0000474 # female reproductive system
       - UBERON:0000990 # reproductive system
       - UBERON:0000922 # embryo
+      - UBERON:0002247 # uterine horn
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0002247 # uterine horn
   embryo_count_2:
     description: >-
       The number of embryos observed in one horn of uterus.
@@ -338,7 +345,7 @@ slots:
       - UBERON:0000990 # reproductive system
       - UBERON:0000922 # embryo
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000002 # uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000002 # uterine embryo count
   embryo_count_2_side:
     description: >-
       The side of the uterus where embryo(s) were observed.
@@ -349,6 +356,9 @@ slots:
       - UBERON:0000474 # female reproductive system
       - UBERON:0000990 # reproductive system
       - UBERON:0000922 # embryo
+      - UBERON:0002247 # uterine horn
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0002247 # uterine horn
   embryo_count_females:
     description: >-
       The number of embryos that are female. 
@@ -359,8 +369,9 @@ slots:
       - UBERON:0000474 # female reproductive system
       - UBERON:0000990 # reproductive system
       - UBERON:0000922 # embryo
+      - FOVT:1000016 # female uterine embryo count
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000016 # female uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000016 # female uterine embryo count
   embryo_count_males:
     description: >-
       The number of embryos that are male.
@@ -371,8 +382,9 @@ slots:
       - UBERON:0000474 # female reproductive system
       - UBERON:0000990 # reproductive system
       - UBERON:0000922 # embryo
+      - FOVT:1000017 # male uterine embryo count
     annotations:
-      pun_as: rdf:type owl:Class; rdfs:subClassOf  FOVT:1000017 # male uterine embryo count
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000017 # male uterine embryo count
 #  embryo_count_left:
 #    description: >-
 #      The number of embryos observed in left horn of uterus.
@@ -493,6 +505,9 @@ slots:
     related_mappings:
       - UBERON:0001911 # mammary gland
       - GO:0007595 # lactation
+      - OBA:VT0001882 # lactation trait
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001882 # lactation trait
   life_stage:
     description: >-
       The developmental stage of the life cycle of the organism represented.
@@ -518,6 +533,9 @@ slots:
       - GO:0044851 # hair cycle phase
       - GO:0042303 # molting cycle
       - GO:0022404 # molting cycle process
+      - OBA:VT0000427 # hair cycle trait
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0000427 # hair cycle trait
   nipple_description:
     description: >-
       The state or condition of the nipple(s).  
@@ -604,6 +622,8 @@ slots:
       - FOVT:0001062 # ovary length
       - FOVT:0001064 # left ovary length
       - FOVT:0001063 # right ovary length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992 # ovary
   ovary_length_2:
     description: >-
       The length of an ovary.
@@ -628,6 +648,8 @@ slots:
       - FOVT:0001062 # ovary length
       - FOVT:0001064 # left ovary length
       - FOVT:0001063 # right ovary length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992 # ovary
   ovary_width_1:
     description: >-
       The width of an ovary.
@@ -648,6 +670,8 @@ slots:
       - UBERON:0000992 # ovary
       - OBA:VT0001126 # ovary morphology trait
       - FOVT:0001371 # ovary width
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992 # ovary
   ovary_width_2:
     description: >-
       The width of an ovary.
@@ -668,6 +692,8 @@ slots:
       - UBERON:0000992 # ovary
       - OBA:VT0001126 # ovary morphology trait
       - FOVT:0001371 # ovary width
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000992 # ovary
   parity:
     description: >-
       The number of times that a viviparous organism has given birth.
@@ -706,6 +732,9 @@ slots:
       - FOVT:1000019 # placental scar count
       - FOVT:1000018 # placental scar
       - UBERON:0000995 # uterus
+      - FOVT:1000024 # placental region
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000024 # placental region
   placental_scar_count_2:
     description: >-
       Number of placental scars observed in one horn of theuterus.
@@ -724,6 +753,9 @@ slots:
       - FOVT:1000019 # placental scar count
       - FOVT:1000018 # placental scar
       - UBERON:0000995 # uterus
+      - FOVT:1000024 # placental region
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf FOVT:1000024 # placental region
 #  placental_scar_count_left:
 #    description: >-
 #      Number of placental scars observed in left horn of uterus.
@@ -752,6 +784,9 @@ slots:
       - FOVT:1000019 # placental scar count
       - FOVT:1000018 # placental scar
       - UBERON:0000995 # uterus
+      - OBA:VT0001711 # placental morphology trait
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001711 # placental morphology trait
   pregnancy:
     description: >-
       Contains a developing embryo, fetus, or unborn offspring.
@@ -822,6 +857,9 @@ slots:
       - FOVT:0001058 # right testis length
       - FOVT:1000006 # left testis width
       - FOVT:1000007 # right testis width
+      - OBA:VT0001146 # testes morphology trait
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf OBA:VT0001146 # testes morphology trait
   testis_length_1:
     description: >-
       The length of the long axis of one male gonad spheroid.
@@ -843,6 +881,8 @@ slots:
       - OBA:VT0001146 # testes morphology trait
       - OBA:1000107 # testis position
       - FOVT:0001057 # testis length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473 # testis
   testis_length_2:
     description: >-
       The length of the long axis of one male gonad spheroid.
@@ -864,6 +904,8 @@ slots:
       - OBA:VT0001146 # testes morphology trait
       - OBA:1000107 # testis position
       - FOVT:0001057 # testis length
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473 # testis
 #  testis_size_units_inferred:
 #    description: >-
 #      Specifies if the testis size units were inferred. 
@@ -894,6 +936,8 @@ slots:
       - OBA:VT0001146 # testes morphology trait
       - OBA:1000107 # testis position
       - FOVT:0001368 # testis width
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473 # testis
   testis_width_2:
     description: >-
       The width of the short axis of one male gonad spheroid.
@@ -915,6 +959,8 @@ slots:
       - OBA:VT0001146 # testes morphology trait
       - OBA:1000107 # testis position
       - FOVT:0001368 # testis width
+    annotations:
+      pun_as: rdf:type owl:Class; rdfs:subClassOf UBERON:0000473 # testis
   testis_position:
     description: >-
       Degree of descent of the male gonad(s).
